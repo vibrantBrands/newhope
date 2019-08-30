@@ -1,0 +1,232 @@
+// Header styles fof the Vibrant rebrand //
+
+header {
+
+	.topbar {
+		background: $nh-blue;
+		height: $topbar-height;
+		display: flex;
+		color: $white;
+		font-size: 1.2em;
+		justify-content: space-between;
+		align-items: center;
+
+		@include flex-column-layout($md-breakpoint);
+
+		@media only screen and (max-width: $md-breakpoint) {
+			height: $topbar-mobile-height;
+			justify-content: space-around;
+		}
+
+		.fa-phone {
+			margin: 0 5px 0 10px;
+		}
+
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+
+		.social {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			a {
+				margin-right: 15px;
+				font-size: 1.2em;
+			}
+		}
+
+		div {
+			display: flex;
+		}
+	}
+
+	.navigation {
+		align-items: center;
+		font-weight: bold;
+		background: $white;
+		display: flex;
+		font-size: 1.3em;
+		justify-content: space-between;
+		text-transform: uppercase;
+		min-height: 80px;
+		padding: 10px 20px;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+
+		@media only screen and (max-width: $md-breakpoint) {
+			padding: 0;
+			justify-content: space-around;
+		}
+
+		.logo {
+			@media only screen and (max-width: $md-breakpoint) {
+				align-self: center;
+			}
+		}
+
+	.toggle-wrapper {
+			display: flex;
+			flex-direction: column;
+			width: 30px;
+			height: 26px;
+			position: relative;
+			margin: -12px 0 0 20px;
+			z-index: 5;
+
+			@media only screen and (min-width: $md-breakpoint) {
+				display: none;
+			}	
+
+			p {
+				color: $nh-blue;
+				font-size: 0.6em;
+				margin: 20px 0 0 -1px;
+			}
+		}
+
+	.menu-toggle {
+			cursor: pointer;		
+
+			.bg {
+				display: block;
+				width: 100%;
+				height: 30px;
+				position: absolute;
+				
+			}
+
+			.bar {
+				background: $nh-blue;
+				display: block;
+				height: 2px;
+				position: absolute;
+				width: 100%;
+				top: 10%;
+
+				&:nth-child(2){
+					top: 50%;
+				}
+				&:nth-child(3){
+					top: 90%;
+				}
+			}
+
+			&.active {
+
+				.bar {
+					//background: $white;
+					transition: $menu-transition;
+					
+					&:first-child {
+						transform: rotate(-45deg);
+						top: 50%;
+					}
+
+					&:nth-child(2) {
+						opacity: 0;
+					}
+
+					&:nth-child(3) {
+						transform: rotate(45deg);
+						top: 50%;
+					}
+				}
+			}
+
+			&.inactive {
+
+				.bar {
+					transition: $menu-transition;
+					
+					&:first-child {
+						transform: rotate(0);
+						top: 20%;
+					}
+
+					&:nth-child(2) {
+						opacity: 1;
+					}
+
+					&:nth-child(3) {
+						transform: rotate(0);
+						top: 80%;
+					}
+				}
+			}
+		}
+
+		nav {
+			background: none;
+			display: flex;
+			overflow: hidden;
+			z-index: 3;
+			letter-spacing: 1px;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				display: none;
+				width: 100%;
+				position: absolute;
+				top: 175px;
+			}
+
+			&.active {
+				display: flex;
+			}
+
+			ul {
+				display: flex;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+
+				@media only screen and (max-width: $md-breakpoint) {
+					flex-direction: column;
+				}
+
+				li {
+					align-items: center;
+					background: none;
+					border-bottom: 1px solid $white;
+					cursor: pointer;
+					display: flex;
+					font-size: 1em;
+					height: 50px;
+					justify-content: center;
+					margin-right: 30px;
+					transition: $menu-transition;
+
+
+					@media only screen and (max-width: $md-breakpoint) {
+						background: $nh-blue;
+						width: 100%;
+						margin-left: 0;
+					}
+
+					a {
+						color: $nh-blue;
+						text-decoration: none;
+
+						&:hover {
+							color: $nh-green;
+						}
+
+						@media only screen and (max-width: $md-breakpoint) {
+							color: $white;
+						}
+					}
+
+					&:hover {
+						animation: movebackground 20s linear infinite alternate;
+						color: red;
+					}
+				}
+			}
+
+		}
+	}
+}

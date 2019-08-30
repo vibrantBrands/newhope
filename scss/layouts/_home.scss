@@ -1,0 +1,241 @@
+
+.homepage {
+
+	.ctas {
+		background: $nh-blue;
+
+		
+		.container {
+			align-items: center;
+			font-size: 1.7em;
+			font-weight: bold;
+			justify-content: space-between;
+			display: flex;
+			padding: 50px 0;
+
+			@include flex-column-layout($md-breakpoint);
+
+			>div {
+				@include mobile-bottom-margin($md-breakpoint, 50px);
+
+				&:nth-child(even) {
+
+					@media only screen and (max-width: $md-breakpoint) {
+		        		display: none;
+		    		}
+
+				}
+
+			}
+
+			img {
+				align-self: center;
+				margin-right: 20px;
+			}
+
+			p {
+				margin-bottom: 0;
+				text-align: left;
+				line-height: 26px;
+			}
+
+			a {
+				align-items: center;
+				justify-content: center;
+				display: flex;
+				color: $white;
+				text-decoration: none;
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.mission {
+		padding:0 5%;
+
+		 @media only screen and (min-width: $sm-breakpoint) {
+        	padding:0 15%;
+    	}
+	}
+
+	.newhope-info {
+		padding: 70px 0;
+
+		@media only screen and (max-width: $md-breakpoint) {
+		    padding-top: 30px;
+		}
+
+		.container {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+
+			@include flex-column-layout($lg-breakpoint);
+
+			>div {
+				margin-top: 30px;
+				width: 247px;
+
+				@media only screen and (max-width: $md-breakpoint) {
+		    		margin-top: 15px;
+				}
+
+				.title {
+					background: $nh-green;
+				}
+
+				&:nth-child(2) {
+
+					.title {
+						background: $nh-blue;
+					}
+				}
+
+				&:nth-child(3) {
+
+					.title {
+						background: $nh-gold;
+					}
+				}
+
+				&:nth-child(4) {
+
+					.title {
+						background: $nh-red;
+					}
+				}
+			}
+
+			.title {
+				
+				color: $white;
+				display: block;
+				display: flex;
+				font-weight: bold;
+				padding-top: 7px;
+				position: absolute;
+				height: 50px;
+				justify-content: center;
+				margin-top: -50px;
+				text-align: center;
+				width: 247px;
+				z-index: 2;
+			}
+		}
+	}
+
+	.greenhouse-bg {
+		background: url('../images/background.png') no-repeat;
+		background-position: 0 100%;
+		min-height: 1100px;
+	}
+
+	.statistics {
+
+		@include hide-mobile($md-breakpoint);
+	}
+
+	.buttons {
+		
+
+		@media only screen and (min-width: $md-breakpoint) {
+        	margin-top: 150px;
+    	}
+
+		.container {
+			align-items: center;
+			display: flex;
+			justify-content: space-around;
+
+			@include flex-column-layout($md-breakpoint);
+		}
+
+		.btn {
+			margin-bottom: 15px;
+
+			@media only screen and (max-width: $md-breakpoint) {
+        		width: 85%;
+    		}
+		}
+	}
+
+	.connect {
+		background: $nh-blue;
+		color: $white;
+		padding: 60px 0;
+		font-size: 1.6em;
+		font-weight: bold;
+
+		.container {
+			display: flex;
+			justify-content: flex-end;
+
+			@include flex-column-layout($md-breakpoint);
+
+			@media only screen and (max-width: $md-breakpoint) {
+        		align-items: center;
+    		}
+		}
+
+		i {
+			margin-right: 10px;
+		}
+
+		.enewsletter {
+			width: 350px;
+			margin-top: 40px;
+
+			input {
+				margin-top: 30px;
+			}
+		}
+
+		.social {
+			display: flex;
+			margin: 40px 0 0 30px;
+			width: 380px;
+
+			.facebook-feed {
+				background: $white;
+				color: $nh-blue;
+				font-size: 0.8em;
+				font-weight: normal;
+				margin-top: 30px;
+				min-height: 300px;
+				padding: 10px;
+
+				.logo-box {
+					align-items: center;
+					border: 1px solid $nh-blue;
+					display: flex;
+					float: left;
+					font-weight: bold;
+					margin-right: 10px;
+					height: 60px;
+					justify-content: center;
+					text-align: center;
+					width: 60px;
+				}
+			}
+			
+			a {
+				color: $white;
+			}
+
+			.fb-like {
+				margin-top: 8px;
+			}
+
+			.icons {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				margin-left: 20px;
+				min-height: 300px;
+				padding-top: 60px;
+			}
+		}
+	}
+
+	
+}
