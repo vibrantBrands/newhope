@@ -154,15 +154,51 @@ p {
     }
 }
 
-.donate-btn {
+.solid-btn {
     align-items: center;
     background: $nh-red;
     color: $white;
+    cursor: pointer;
     display: flex;
     font-family: $secondary-font;
-    height: $topbar-height;
+    font-size: 18px;
     justify-content: center;
-    width: 150px;
+    padding: 15px 25px;
+
+    &.green {
+        background: $nh-green;
+    }
+    &.gold {
+        background: $nh-gold;
+    }
+}
+
+.bar {
+    align-items: center;
+    background: $nh-blue;
+    color: $white;
+    display: flex;
+    font-size: 24px;
+    height: 60px;
+    justify-content: center;
+    width: 100%;
+
+    &.large {
+        height: 80px;
+    }
+    &.blue {
+        background: $nh-blue;
+    }
+    &.lt-blue {
+        background: $nh-lt-blue;
+    }
+    &.red {
+        background: $nh-red;
+    }
+
+    @media only screen and (max-width: $md-breakpoint) {
+        padding-left: 30px;
+    }
 }
 
 

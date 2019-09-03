@@ -98,6 +98,10 @@
 							<div>
 								<span>New Hope Community</span>
 								<div class="fb-like" data-href="https://www.newhopecommunity.org" data-width="150" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+								<?php
+									$a = new Area("Social Photo");
+									$a->display();
+								?>
 							</div>
 						</div>
 						

@@ -20,7 +20,7 @@
 	      				</nav>
       			</div>
 				<div>
-					<a class="donate-btn">DONATE</a>
+					<a class="solid-btn">DONATE</a>
 				</div>
 			</div>
 			<div class="logos">

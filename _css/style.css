@@ -3896,15 +3896,41 @@ p {
   .btn:hover {
     color: #fff; }
 
-.donate-btn {
+.solid-btn {
   align-items: center;
   background: #de3a46;
   color: #fff;
+  cursor: pointer;
   display: flex;
   font-family: "Open Sans Condensed", serif;
-  height: 50px;
+  font-size: 18px;
   justify-content: center;
-  width: 150px; }
+  padding: 15px 25px; }
+  .solid-btn.green {
+    background: #589d4a; }
+  .solid-btn.gold {
+    background: #e0a422; }
+
+.bar {
+  align-items: center;
+  background: #3667b1;
+  color: #fff;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  justify-content: center;
+  width: 100%; }
+  .bar.large {
+    height: 80px; }
+  .bar.blue {
+    background: #3667b1; }
+  .bar.lt-blue {
+    background: #36a6dc; }
+  .bar.red {
+    background: #de3a46; }
+  @media only screen and (max-width: 768px) {
+    .bar {
+      padding-left: 30px; } }
 
 /* ==========================================================================
    Helper classes
@@ -4084,9 +4110,7 @@ header .topbar {
   align-items: center; }
   @media only screen and (max-width: 768px) {
     header .topbar {
-      flex-direction: column; } }
-  @media only screen and (max-width: 768px) {
-    header .topbar {
+      flex-direction: column-reverse;
       height: 90px;
       justify-content: space-around; } }
   header .topbar .fa-phone {
@@ -4224,7 +4248,7 @@ header .navigation {
           color: #3667b1;
           text-decoration: none; }
           header .navigation nav ul li a:hover {
-            color: #589d4a; }
+            color: #5081ca; }
           @media only screen and (max-width: 768px) {
             header .navigation nav ul li a {
               color: #fff; } }
@@ -4267,10 +4291,11 @@ header .navigation {
       margin-right: 20px; }
 
 .homepage .mission {
-  padding: 0 5%; }
+  padding: 0 5% 40px;
+  text-align: center; }
   @media only screen and (min-width: 576px) {
     .homepage .mission {
-      padding: 0 15%; } }
+      padding: 0 15% 40px; } }
 
 .homepage .newhope-info {
   padding: 70px 0; }
@@ -4313,9 +4338,12 @@ header .navigation {
       z-index: 2; }
 
 .homepage .greenhouse-bg {
-  background: url("../images/background.png") no-repeat;
   background-position: 0 100%;
-  min-height: 1100px; }
+  background: url("../images/background.png") no-repeat;
+  background-size: cover;
+  height: auto;
+  min-height: 1100px;
+  width: 100%; }
 
 @media only screen and (max-width: 768px) {
   .homepage .statistics {
@@ -4340,7 +4368,8 @@ header .navigation {
       width: 85%; } }
 
 .homepage .connect {
-  background: #3667b1;
+  background: url("../images/e-newsletter-bg.png") no-repeat;
+  background-size: cover;
   color: #fff;
   padding: 60px 0;
   font-size: 1.6em;
@@ -4384,6 +4413,8 @@ header .navigation {
         justify-content: center;
         text-align: center;
         width: 60px; }
+      .homepage .connect .social .facebook-feed img {
+        margin-top: 15px; }
     .homepage .connect .social a {
       color: #fff; }
     .homepage .connect .social .fb-like {
@@ -4395,6 +4426,10 @@ header .navigation {
       margin-left: 20px;
       min-height: 300px;
       padding-top: 60px; }
+
+.homepage .ccm-image-slider-title {
+  position: absolute;
+  left: -9999px; }
 
 footer {
   background: #a0a0a0;
@@ -4444,6 +4479,208 @@ footer {
     text-align: center; }
     footer .logos .cql-logo {
       margin: 0 30px 0 110px; }
+
+.donation-page p {
+  font-size: 18px;
+  line-height: 26px; }
+
+.donation-page .image-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .donation-page .image-row div {
+    width: 25%; }
+    .donation-page .image-row div img {
+      height: auto;
+      width: 100%; }
+
+.donation-page .donation-text {
+  display: flex;
+  margin-top: 65px;
+  align-items: flex-start; }
+  @media only screen and (max-width: 768px) {
+    .donation-page .donation-text {
+      flex-direction: column; } }
+  .donation-page .donation-text h1 {
+    margin-top: 0;
+    font-size: 54px;
+    line-height: 50px;
+    letter-spacing: 1px; }
+    .donation-page .donation-text h1 span {
+      color: #36a6dc; }
+  @media only screen and (max-width: 768px) {
+    .donation-page .donation-text img {
+      height: auto;
+      width: 100%; } }
+  .donation-page .donation-text > div {
+    height: 400px; }
+    .donation-page .donation-text > div:first-child {
+      width: 33.3%; }
+      @media only screen and (max-width: 768px) {
+        .donation-page .donation-text > div:first-child {
+          height: auto;
+          width: 100%; } }
+    .donation-page .donation-text > div:nth-child(2) {
+      padding-left: 50px;
+      width: 66.6%; }
+      @media only screen and (max-width: 768px) {
+        .donation-page .donation-text > div:nth-child(2) {
+          margin: 50px 0;
+          height: auto;
+          width: 100%; } }
+  .donation-page .donation-text .buttons {
+    display: flex;
+    margin-top: 50px; }
+    .donation-page .donation-text .buttons > div {
+      margin-right: 30px; }
+
+.donation-page .donation-do {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto; }
+  @media only screen and (max-width: 768px) {
+    .donation-page .donation-do {
+      flex-direction: column; } }
+  .donation-page .donation-do h2 {
+    margin: 10px 0 5px; }
+  .donation-page .donation-do > div {
+    width: 20%; }
+    @media only screen and (max-width: 768px) {
+      .donation-page .donation-do > div {
+        margin: 30px auto;
+        width: 80%; } }
+
+.donation-page .story-wrapper {
+  background: url("../images/donation/background-image.png") no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+  padding-bottom: 80px; }
+  .donation-page .story-wrapper .container {
+    position: relative; }
+
+.donation-page .our-stories,
+.donation-page .ways-to-participate {
+  text-align: center;
+  min-height: 500px; }
+  .donation-page .our-stories h2,
+  .donation-page .ways-to-participate h2 {
+    margin: 50px auto 0; }
+  @media only screen and (max-width: 992px) {
+    .donation-page .our-stories,
+    .donation-page .ways-to-participate {
+      min-height: 880px;
+      padding-bottom: 50px; } }
+  .donation-page .our-stories .container,
+  .donation-page .ways-to-participate .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 992px) {
+      .donation-page .our-stories .container,
+      .donation-page .ways-to-participate .container {
+        flex-direction: column; } }
+    .donation-page .our-stories .container > div,
+    .donation-page .ways-to-participate .container > div {
+      margin-top: 60px;
+      width: 28%;
+      position: relative; }
+      .donation-page .our-stories .container > div img,
+      .donation-page .ways-to-participate .container > div img {
+        width: 100%;
+        height: auto; }
+      @media only screen and (max-width: 768px) {
+        .donation-page .our-stories .container > div,
+        .donation-page .ways-to-participate .container > div {
+          margin-top: 80px;
+          width: 50%; } }
+      .donation-page .our-stories .container > div .title,
+      .donation-page .ways-to-participate .container > div .title {
+        background: #3667b1; }
+      .donation-page .our-stories .container > div:nth-child(2) .title,
+      .donation-page .ways-to-participate .container > div:nth-child(2) .title {
+        background: #e0a422; }
+      .donation-page .our-stories .container > div:nth-child(3) .title,
+      .donation-page .ways-to-participate .container > div:nth-child(3) .title {
+        background: #589d4a; }
+      .donation-page .our-stories .container > div.blue .title,
+      .donation-page .ways-to-participate .container > div.blue .title {
+        background: #3667b1; }
+    .donation-page .our-stories .container .title,
+    .donation-page .ways-to-participate .container .title {
+      color: #fff;
+      display: block;
+      display: flex;
+      font-weight: bold;
+      padding-top: 15px;
+      position: absolute;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      z-index: 2; }
+
+.donation-page .ways-to-participate {
+  min-height: 400px; }
+
+.donation-page .quote {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  padding: 50px;
+  position: absolute;
+  right: 50px;
+  width: 60%;
+  font-size: 1.2em;
+  line-height: 1.3em; }
+  @media only screen and (max-width: 992px) {
+    .donation-page .quote {
+      left: 10%;
+      width: 75%;
+      position: relative; } }
+  .donation-page .quote .quote-mark {
+    position: absolute; }
+    .donation-page .quote .quote-mark.left {
+      top: -40px;
+      left: -40px; }
+    .donation-page .quote .quote-mark.right {
+      right: -40px;
+      top: 150px; }
+
+.donation-page .hope-farm {
+  background: url("../images/donation/hope-farm-bg.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 350px;
+  margin-top: 20px;
+  padding-top: 90px;
+  width: 100%; }
+  .donation-page .hope-farm .support-cta {
+    margin-left: 10%;
+    position: relative; }
+    .donation-page .hope-farm .support-cta .hope-farm-icon {
+      background: #589d4a;
+      border-radius: 65px;
+      padding: 8px;
+      position: absolute;
+      width: 128px;
+      z-index: 2; }
+    .donation-page .hope-farm .support-cta .hope-text {
+      align-items: center;
+      justify-content: center;
+      background: rgba(222, 58, 70, 0.6);
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 40px;
+      height: 70px;
+      left: 120px;
+      position: absolute;
+      text-align: center;
+      top: 30px;
+      width: 200px; }
+      .donation-page .hope-farm .support-cta .hope-text p {
+        margin: 0;
+        line-height: 20px; }
+      .donation-page .hope-farm .support-cta .hope-text span {
+        font-weight: bold; }
 
 /* ==========================================================================
    Print styles.

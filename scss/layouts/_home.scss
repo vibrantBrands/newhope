@@ -3,8 +3,7 @@
 
 	.ctas {
 		background: $nh-blue;
-
-		
+	
 		.container {
 			align-items: center;
 			font-size: 1.7em;
@@ -51,10 +50,11 @@
 	}
 
 	.mission {
-		padding:0 5%;
+		padding:0 5% 40px;
+		text-align: center;
 
 		 @media only screen and (min-width: $sm-breakpoint) {
-        	padding:0 15%;
+        	padding:0 15% 40px;
     	}
 	}
 
@@ -125,9 +125,12 @@
 	}
 
 	.greenhouse-bg {
-		background: url('../images/background.png') no-repeat;
 		background-position: 0 100%;
+		background: url('../images/background.png') no-repeat;
+		background-size: cover;
+		height: auto;
 		min-height: 1100px;
+		width: 100%;
 	}
 
 	.statistics {
@@ -160,7 +163,8 @@
 	}
 
 	.connect {
-		background: $nh-blue;
+		background: url('../images/e-newsletter-bg.png') no-repeat;
+		background-size: cover;
 		color: $white;
 		padding: 60px 0;
 		font-size: 1.6em;
@@ -216,6 +220,10 @@
 					text-align: center;
 					width: 60px;
 				}
+
+				img {
+					margin-top: 15px;
+				}
 			}
 			
 			a {
@@ -236,6 +244,10 @@
 			}
 		}
 	}
-
+	
+	.ccm-image-slider-title {
+		position: absolute;
+		left: -9999px;
+	}
 	
 }
