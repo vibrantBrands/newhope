@@ -11,8 +11,9 @@
 	    ?>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/style.css">
-			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/responsive.css">
+			<!-- <link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/responsive.css">
 			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/typography.css">
+    -->
 
 
 			<?php Loader::element('header_required'); ?> <!-- must be last in load order -->

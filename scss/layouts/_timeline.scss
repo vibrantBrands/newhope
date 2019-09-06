@@ -1,0 +1,203 @@
+
+.timeline {
+
+	.intro {
+		background: url('../images/timeline/collage1.jpg') no-repeat;
+		background-size: cover;
+		height: 900px;
+		min-height: 100vh;
+		position: relative;
+		background-attachment: fixed;
+		background-position: 100% 150px;
+		background-repeat: no-repeat;
+
+		.legacy {
+			background-color: rgba(0, 0, 0, .7);
+			margin-top: 50px;
+			position: absolute;
+			text-align: right;
+			right: 0;
+			top: 90px;
+			width: 50%;
+
+
+			@media only screen and (max-width: $md-breakpoint) {
+				width: 100%;
+			}
+
+			h1 {
+				margin-top: 30px;
+				padding-right: 10%;
+				line-height: 1em;
+				color: $white;
+				font-size: 5em;
+			}
+		}
+
+		.roots {
+			color: $black;
+			background-color: rgba(255, 255, 255, .7);
+			padding: 40px 40px 50px 100px;
+			position: absolute;
+			right: 0;
+			top: 450px;
+			width: 60%;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				width: 100%;
+			}
+
+			h2 {
+				color: $black;
+				font-size: 3.8em;
+				line-height: 55px;
+				margin: 30px 0 10px auto;
+			}
+
+			p {
+				font-size: $timeline-font-size;
+				line-height: 28px;
+			}
+		}
+	}
+
+	.years {
+		display: flex;
+		position: sticky;
+		top: 150px;
+		height: 100px;
+		width: 100%;
+		z-index: 5;
+
+		@media only screen and (max-width: $md-breakpoint) {
+			top: 175px;
+		}
+
+		div {
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			background: $black;
+			color: $white;
+			cursor: pointer;
+			display: flex;
+			font-size: 1em;
+			text-align: center;
+			width: 25%;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				font-size: .8em;
+			}
+
+			span {
+				font-size: 2em;
+			}
+
+			&.active {
+				background: $nh-blue;
+			}
+		}
+	}
+
+	.dateboxes {
+		position: relative;
+
+		&:before {
+			content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 50%;
+		    height: 100%;
+		    width: 15px;
+		    background: #000;
+		    z-index: 1;
+
+		    @media only screen and (max-width: $lg-breakpoint) {
+				left: 15%;
+			}
+		}
+	}
+	
+	.timeline-list {
+		background: none;
+
+		li {
+
+			&:nth-child(odd) {
+			
+				.timeline-post {
+	    			padding: 3.5rem 6rem 3.5rem 13rem;
+	    			top: 50%;
+	    			right: 0;
+
+	    			@media only screen and (max-width: $lg-breakpoint) {
+						padding: 3.5rem 4rem 3.5rem 32%;
+						width: 100%;
+					}
+				}
+			}
+			
+			.timeline-bg {
+				background-size: cover;
+			    min-height: 100vh;
+			    position: relative;
+			    background-attachment: fixed;
+			    background-position: 100% 173px;
+			    background-repeat: no-repeat;
+			}
+
+			.timeline-post {
+				background-color: rgba(0, 0, 0, .8);
+				color: $white;
+				margin-top: -125px;
+				width: 60%;
+    			height: 250px;
+    			padding: 3.5rem 12rem 3.5rem 6rem;
+    			position: absolute;
+    			top: 50%;
+    			z-index: 3;
+
+    			@media only screen and (max-width: $lg-breakpoint) {
+					padding: 3.5rem 4rem 5.5rem 32%;
+					height: 280px;
+					width: 100%;
+				}
+
+				p {
+					font-size: $timeline-font-size;
+					margin-top: 10px;
+					line-height: 22px;
+				}
+
+				span {
+					font-size: $timeline-header-size;
+					font-weight: bold;
+				}
+			}
+
+			.timeline-circle {
+				background: #c05c4d;
+				display: block;
+				position: absolute;
+			    -moz-transform: translateX(-40%);
+			    -ms-transform: translateX(-40%);
+			    -o-transform: translateX(-40%);
+			    -webkit-transform: translateX(-40%);
+			    border-radius: 50%;
+			    border: 3px solid #fff;
+			    bottom: 45%;
+			    height: 80px;
+			    left: 50%;
+			    transform: translateX(-40%);
+			    transition: left 1s ease-out;
+			    width: 80px;
+			    z-index: 4;
+
+			    @media only screen and (max-width: $lg-breakpoint) {
+					left: 15%;
+				}
+			}
+		}
+	}
+}

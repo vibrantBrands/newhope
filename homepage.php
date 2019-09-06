@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<div class="homepage">
+<div class="homepage content">
 	<section class="slideshow">
 		<?php
 			$a = new Area("Photo Slider");

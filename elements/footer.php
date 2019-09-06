@@ -32,6 +32,7 @@
 
 		      <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=292131704190093&autoLogAppEvents=1"></script>
+<script src="<?php echo $this->getThemePath(); ?>/_js/vendor/aos.js"></script>
 <script type="text/javascript" src="<?php echo $this->getThemePath(); ?>/_js/main.js"></script>
 
 	</body>	

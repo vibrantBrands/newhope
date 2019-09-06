@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<div class="donation-page">
+<div class="donation-page content">
 		
 	<div class="image-row">
 		<?php
