@@ -1,5 +1,6 @@
 
 .timeline {
+	margin-top: 0;
 
 	.intro {
 		background: url('../images/timeline/collage1.jpg') no-repeat;
@@ -123,6 +124,7 @@
 		background: none;
 
 		li {
+			border-bottom: 8px solid white;
 
 			&:nth-child(odd) {
 			

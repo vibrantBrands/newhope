@@ -36,7 +36,7 @@
 		<ul class="timeline-list">
 	
 	<!-- ADD THIS LOOP WHEN SITE IS ON SERVER AND IMAGES HAVE BEEN ADDED TO THE TIMELINE FILE SET.  LOOP WILL PULL IN IMAGE AS BACKGROUND, ADD IMAGE TITLE AS SLIDE TITLE AND IMAGE DESCRIPTION AS THE TIMELINE TEXT
-		--------------
+		--------------  -->
 
 			<?php
 			  Loader::model("file_set");
@@ -44,7 +44,7 @@
 
 			  $counter = 0;
 			 
-			  $fs = FileSet::getByName('Timeline');
+			  $fs = FileSet::getByName('Timeline 2.0');
 			  $fl = new FileList();
 			  $fl->filterBySet($fs);
 			  $fl->sortBy('fsDisplayOrder', 'asc');
@@ -52,11 +52,12 @@
 			 
 			  foreach($files as $f) {
 			  	$counter++;
-			    $title = $f->getTitle(); 
+			    $title = $f->getAttribute("slide_title");
+			    $class = $f->getAttribute("era");  
 			    $text = $f->getDescription();
 			    $filepath = $f->getDownloadURL(); ?>
 
-			    <li>
+			    <li class="<?php echo $class ?>">
 			    	<div class="timeline-bg" style="background-image:url('<?php echo $filepath ?>)">
 					<div class="timeline-circle"></div>
 
@@ -74,9 +75,8 @@
 				</li>
 
 			  <?php } ?>
-			  ------>
 			
-			<li>
+			<!-- <li>
 				<div class="timeline-bg seventies" style="background-image:url('<?php echo $this->getThemePath(); ?>/images/timeline/placeholder1.jpg')">
 					<div class="timeline-circle"></div>
 					<article class="timeline-post" data-aos="fade-left">
@@ -344,7 +344,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum, neque ac facilisis molestie, enim sapien interdum mauris, semper mollis quam orci at ipsum.</p>
 					</article>
 				</div>
-			</li>
+			</li> -->
 		</ul>
 	</section>
 

@@ -1,7 +1,7 @@
 // Header styles fof the Vibrant rebrand //
 
 header {
-	//border: 1px solid #000;
+	border-bottom: 1px solid $nh-blue;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -163,74 +163,127 @@ header {
 			}
 		}
 
-		nav {
-			background: none;
-			display: flex;
-			overflow: hidden;
-			z-index: 3;
-			letter-spacing: 1px;
+		.nav {
+            align-items: center;
+            display: flex;
+            font-weight: 700;
+            justify-content: flex-end;
+            text-align: right;
+            z-index: 10;
 
-			@media only screen and (max-width: $md-breakpoint) {
-				display: none;
-				width: 100%;
-				position: absolute;
-				top: 175px;
-			}
+            @media screen and (max-width: $xl-breakpoint) {
+                justify-content: center;
+            }
 
-			&.active {
-				display: flex;
-			}
+            @media screen and (max-width: $md-breakpoint) {
+                align-items: flex-end;
+                background: black;
+                display: none;
+                position: fixed;
+                top: 176px;
+                width: 100%;
+            }
 
-			ul {
-				display: flex;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				width: 100%;
+            @include flex-column-layout($md-breakpoint);
 
-				@media only screen and (max-width: $md-breakpoint) {
-					flex-direction: column;
-				}
+            &.active {
+            	display: block;
+            }
 
-				li {
-					align-items: center;
-					background: none;
-					border-bottom: 1px solid $white;
-					cursor: pointer;
-					display: flex;
-					font-size: 1em;
-					height: 50px;
-					justify-content: center;
-					margin-right: 30px;
-					transition: $menu-transition;
+            >li {
+                color: $nh-blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 0 20px 0;
+                padding: 0 10px;
+                text-align: left;
+                text-decoration: none;
+
+                a {
+                	text-decoration: none;
+                }
+
+                .submenu {
+                    max-height: 0;
+                    margin-top: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    top: 120px;
+                    transition: all .4s ease-out;
+                    z-index: 2;
+
+                    >.nav-item {
+                    	background: $nh-blue;
+                    	border: $nh-blue 1px solid;
+                    	padding: 10px;
+                    	position: relative;
+
+                    	a {
+                    		color: $nav-color;
+                    		
+                    		&:hover {
+								color: white;
+								background: $nh-lt-blue;
+                    		}
+                    	}
+                    }
+
+                    @media screen and (max-width: $md-breakpoint) {
+						max-width: 60%;
+						right: 0;
+						top: 0;
+
+						 >.nav-item {
+						 	border-top: 1px solid white;
+						 	border-left: 1px solid white;
+						 	margin-top: 0;
+						 	padding: 0;
+							
+							a {
+								padding: 0 10px;
+							}
+
+						 }
+                    }
+                }
+
+                &:hover {
+                    
+                    .submenu {
+                        max-height: 500px;
+                    }
+                }
 
 
-					@media only screen and (max-width: $md-breakpoint) {
-						background: $nh-blue;
-						width: 100%;
-						margin-left: 0;
-					}
+                @media screen and (max-width: $md-breakpoint) {
+                    background: $nh-blue;
+                    border-bottom: 1px solid white;
+                    font-size: 1.2em;
+                    height: auto;
+                    position: relative;
+                    margin: 0;
+                    text-align: left;
+                    width: 100%;
 
-					a {
-						color: $nh-blue;
-						text-decoration: none;
+                    a {
+                        align-items: center;
+                        color: white;
+                        display: flex;
+                        height: 60px;
+                        width: 100%;
 
-						&:hover {
-							color: $hover-color;
-						}
+                        &:hover {
+                            color: white;
+                        }
+                    }
 
-						@media only screen and (max-width: $md-breakpoint) {
-							color: $white;
-						}
-					}
-
-					&:hover {
-						animation: movebackground 20s linear infinite alternate;
-						color: red;
-					}
-				}
-			}
-
-		}
+                    &:hover {
+                        background: $nh-lt-blue;
+                    }
+                }
+            }
+        }
 	}
 }

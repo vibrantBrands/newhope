@@ -41,8 +41,10 @@
 	</section>
 	<section class="mission">
 		<div class="container">
-				<h1>A World of Caring and Innovation</h1>
-				<p>New Hope Community is a place to learn, where life skills can be immersed with support professionals that create environments of innovation. A place where strengths, talents, personal direction and accomplishments can be discovered.</p>
+			<?php
+				$a = new Area("Primary Text");
+				$a->display();
+			?>
 		</div>
 	</section>
 	<div class="greenhouse-bg">

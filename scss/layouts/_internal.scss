@@ -1,0 +1,170 @@
+.internal_wrapper {
+	margin-top: 130px;
+	width: 100%;
+
+	h1 {
+		text-transform: uppercase;
+		margin-top: 10px;
+
+		@media screen and (max-width: $lg-breakpoint){
+			margin-left: 0px;
+		}
+	}
+
+	h1, h2, h3, h4, h5 {
+		text-align: left;
+	}
+
+	.page-header {
+
+		img {
+			width: 100%;
+		}
+	}
+
+	form {
+		width: 500px;
+	}
+
+	.internal_content_wrapper {
+		clear: both;
+		margin: 0 auto;
+		min-height: 600px;
+		padding: 60px 0;
+		text-align: left;
+
+		.content {
+			margin-top: 0px;
+		}
+
+		.sidebar_container {
+			float: left;
+			font-family: $base-font;
+			font-weight: 800;
+			position: relative;
+			width: 28%;
+
+			@media screen and (max-width: $lg-breakpoint){
+				float: none;
+				margin-top: 50px;
+		  		width: 100%;
+			}
+
+			.sublinks {
+
+				li {
+					border-top: 1px solid $nh-blue;
+					min-height: 40px;
+					margin-bottom: 0px;
+					padding: 8px 0 0 16px;
+
+					a {
+						text-decoration: none;
+					}
+				}
+
+				.nav-dropdown {
+					min-height: 80px;
+
+					>ul {
+						margin-top: 8px;
+					}
+				}
+			}
+		}
+
+		.internal_content_container {
+			float: right;
+			padding: 0 5% 60px 0;
+			position: relative;
+			width: 65%;
+
+			@media screen and (max-width: $lg-breakpoint){
+				float: none;
+				padding: 0 30px;
+		  		width: 100%;
+			}
+
+			i {
+				color: $nh-lt-blue;
+				font-size: 1.5em;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.wufoo-form-container {
+
+		header {
+			display: none;
+		}
+	}
+}
+
+.why-rhythm {
+	margin: 0 auto;
+	max-width: $content-max-width;
+	padding: 60px 0;
+	text-align: center;
+
+	h1 {
+		margin-left: 130px;
+
+		@media screen and (max-width: $lg-breakpoint){
+			margin-left: 20px;
+		}
+	}
+
+	.content {
+		margin: 0 auto;
+		text-align: left;
+		width: 80%;
+
+		ul {
+			li {
+				display: flex;
+				align-items: center;
+
+				>div {
+					&:first-child {
+						display: flex;
+						justify-content: center;
+						min-width: 130px;
+
+					}
+				}
+			}
+		}
+
+		/*div {
+
+			&:first-child {
+				display: flex;
+				float: left;
+				height: 130px;
+				justify-content: center;
+				width: 160px;
+
+				@media screen and (max-width: $lg-breakpoint){
+					float: none;
+				}
+
+				img {
+					align-self: center;
+				}
+			}
+
+			&:nth-child(2) {
+				margin-left: 162px;
+
+				@media screen and (max-width: $lg-breakpoint){
+					margin-left: 20px;
+				}
+			}
+		}*/
+	}
+}
+
+
+
+

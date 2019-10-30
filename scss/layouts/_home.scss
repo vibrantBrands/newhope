@@ -1,6 +1,7 @@
 
 .homepage {
 
+
 	.ctas {
 		background: $nh-blue;
 	
@@ -33,9 +34,10 @@
 			}
 
 			p {
+				font-size: 1em;
+				line-height: 26px;
 				margin-bottom: 0;
 				text-align: left;
-				line-height: 26px;
 			}
 
 			a {
@@ -52,6 +54,14 @@
 	.mission {
 		padding:0 5% 40px;
 		text-align: center;
+
+		h1 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.4em;
+		}
 
 		 @media only screen and (min-width: $sm-breakpoint) {
         	padding:0 15% 40px;
