@@ -23,8 +23,8 @@
 				<br />NEW HOPE</h1>
 				<p>For more than 40 years, New Hope Community has been driving a culture of independence, inclusion, and innovation for people with intellectual and developmental disabilities. Your tax-deductible donation will help transform lives and support life-changing services. Thank you for making New Hope Community and the people we serve a part of your life.</p>
 				<div class="buttons">
-					<div class="solid-btn">DONATE NOW</div>
-					<div class="solid-btn gold">MAKE TRIBUTE</div>
+					<a href="/support-us/donate-now"><div class="solid-btn">DONATE NOW</div></a>
+					<a href="/support-us/donate-now"><div class="solid-btn gold">MAKE TRIBUTE</div></a>
 					<div class="solid-btn green">EVENTS</div>
 				</div>
 			</div>

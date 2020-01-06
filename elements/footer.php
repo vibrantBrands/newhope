@@ -20,7 +20,7 @@
 	      				</nav>
       			</div>
 				<div>
-					<a class="solid-btn">DONATE</a>
+					<a class="solid-btn" href="/support-us/donation">DONATE</a>
 				</div>
 			</div>
 			<div class="logos">

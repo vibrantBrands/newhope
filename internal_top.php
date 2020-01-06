@@ -25,6 +25,7 @@
     ?>
   </div>
 	<div class="sidebar_container">
+     <h2>Related Pages</h2>
 		<?php
             $bt = BlockType::getByHandle('autonav');
             $bt->controller->displayPages = 'below'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'

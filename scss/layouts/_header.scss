@@ -179,6 +179,8 @@ header {
                 align-items: flex-end;
                 background: black;
                 display: none;
+                font-size: 16px;
+                min-height: 1000px;
                 position: fixed;
                 top: 176px;
                 width: 100%;
@@ -204,7 +206,7 @@ header {
                 	text-decoration: none;
                 }
 
-                .submenu {
+                >.submenu {
                     max-height: 0;
                     margin-top: -1px;
                     overflow: hidden;
@@ -214,9 +216,10 @@ header {
                     transition: all .4s ease-out;
                     z-index: 2;
 
-                    >.nav-item {
+                    .nav-item {
                     	background: $nh-blue;
-                    	border: $nh-blue 1px solid;
+                    	border: $white 1px solid;
+                    	border-top: 0;
                     	padding: 10px;
                     	position: relative;
 
@@ -230,6 +233,17 @@ header {
                     	}
                     }
 
+                    .submenu {
+                    	margin-bottom: 0;
+                    	margin-top: 10px;
+
+                    	.nav-item {
+                    		color: white;
+                    		list-style-type: disc;
+                    		border: 0;
+                    	}
+                    }
+
                     @media screen and (max-width: $md-breakpoint) {
 						max-width: 60%;
 						right: 0;
@@ -240,11 +254,19 @@ header {
 						 	border-left: 1px solid white;
 						 	margin-top: 0;
 						 	padding: 0;
+
+						 	&:last-child {
+						 		border-bottom: 1px solid white;
+						 	}
 							
 							a {
 								padding: 0 10px;
 							}
 
+						 }
+
+						 .submenu {
+						 	display: none;
 						 }
                     }
                 }
@@ -252,7 +274,7 @@ header {
                 &:hover {
                     
                     .submenu {
-                        max-height: 500px;
+                        max-height: 800px;
                     }
                 }
 

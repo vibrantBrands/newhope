@@ -20,7 +20,6 @@
 
 	</head>
 
-<div class="<?php echo $c->getPageWrapperClass(); ?>"> <!-- sets C5 body class -->
 	<body class="<?php if ($po->isHome()) { echo "home_wrapper"; } else {echo "internal_wrapper"; }  ?>">
 		<body class="vibrant">
   <div class="<?php echo $c->getPageWrapperClass()?>">
@@ -35,7 +34,7 @@
           <a href="/"><i class="fa fa-youtube"></i></a>
           <a href="/"><i class="fa fa-twitter"></i></a>
         </div>
-        <a class="solid-btn">DONATE</a>
+        <a class="solid-btn" href="/support-us/donation">DONATE</a>
       </div>
     </div>
     <div class="navigation">

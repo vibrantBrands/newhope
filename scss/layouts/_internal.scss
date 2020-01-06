@@ -11,8 +11,17 @@
 		}
 	}
 
+	h2 {
+		margin-top: $h2-top-margin;
+		color: $nh-red;
+	}
+
 	h1, h2, h3, h4, h5 {
 		text-align: left;
+	}
+
+	p {
+		line-height: 28px;
 	}
 
 	.page-header {
@@ -38,11 +47,19 @@
 		}
 
 		.sidebar_container {
+			color: $nh-blue;
 			float: left;
 			font-family: $base-font;
 			font-weight: 800;
+			padding-left: 3%;
 			position: relative;
 			width: 28%;
+
+			h2 {
+				font-size: 20px;
+				margin-top: 10px;
+				color: $nh-blue;
+			}
 
 			@media screen and (max-width: $lg-breakpoint){
 				float: none;
@@ -50,24 +67,30 @@
 		  		width: 100%;
 			}
 
-			.sublinks {
+			.quick-links-list {
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 25px;
+				margin: 10px 0 0 10px;
 
-				li {
-					border-top: 1px solid $nh-blue;
-					min-height: 40px;
-					margin-bottom: 0px;
-					padding: 8px 0 0 16px;
+				a {
+					text-decoration: none;
+					color: $black;
 
-					a {
-						text-decoration: none;
+					&:hover {
+						color: $nh-blue;
 					}
-				}
+				}	
+			}
 
-				.nav-dropdown {
-					min-height: 80px;
+			.nav-dropdown {
 
-					>ul {
-						margin-top: 8px;
+				ul {
+					list-style-type: disc;
+					margin-left: 30px;
+
+					@media screen and (max-width: $lg-breakpoint){
+						display: none;
 					}
 				}
 			}
@@ -75,11 +98,16 @@
 
 		.internal_content_container {
 			float: right;
-			padding: 0 5% 60px 0;
+			border-left: $nh-blue 3px solid;
+			margin-bottom: 50px;
+			min-height: 500px;
+			padding: 0 10% 60px 5%;
 			position: relative;
-			width: 65%;
+			width: 70%;
 
 			@media screen and (max-width: $lg-breakpoint){
+				border-left: 0;
+				border-bottom: $nh-blue 1px solid;
 				float: none;
 				padding: 0 30px;
 		  		width: 100%;
@@ -89,6 +117,30 @@
 				color: $nh-lt-blue;
 				font-size: 1.5em;
 				margin-right: 5px;
+			}
+		}
+
+		.testimonial-box {
+			align-items: center;
+			background: $nh-blue;
+			color: $white;
+			margin: 50px 0 0 50px;
+			max-height: 160px;
+			display: flex;
+			justify-content: center;
+
+			img {
+				margin: 0 40px 0 -60px;
+				max-width: fit-content;
+			}
+
+			p {
+				font-weight: 800;
+				line-height: 22px;
+			}
+
+			.name {
+				font-weight: 400;
 			}
 		}
 	}
