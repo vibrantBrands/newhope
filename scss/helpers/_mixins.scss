@@ -8,7 +8,7 @@
    transform: translateY(-50%);
 }
 
-@mixin flex-column-layout($breakpoint) {
+@mixin flex-column-layout($breakpoint: $lg-breakpoint) {
 
    @media only screen and (max-width: $breakpoint) {
         flex-direction: column;

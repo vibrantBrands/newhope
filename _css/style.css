@@ -4828,11 +4828,14 @@ header {
     align-items: center; }
     @media only screen and (max-width: 768px) {
       header .topbar {
-        flex-direction: column-reverse;
-        height: 90px;
+        align-items: center;
+        height: auto;
         justify-content: space-around; } }
     header .topbar .fa-phone {
       margin: 0 5px 0 10px; }
+      @media only screen and (max-width: 768px) {
+        header .topbar .fa-phone {
+          margin-left: 0; } }
     header .topbar a {
       color: #fff;
       text-decoration: none; }
@@ -4840,11 +4843,26 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between; }
+      @media only screen and (max-width: 768px) {
+        header .topbar .social {
+          margin-left: 15px; } }
       header .topbar .social a {
         margin-right: 15px;
         font-size: 1.2em; }
     header .topbar div {
       display: flex; }
+      @media only screen and (max-width: 768px) {
+        header .topbar div:first-child {
+          margin: 10px 0; } }
+      @media only screen and (max-width: 768px) {
+        header .topbar div:nth-child(2) {
+          flex-direction: column; }
+          header .topbar div:nth-child(2) .social {
+            display: none;
+            margin-left: 20px;
+            padding: 10px 0; }
+            header .topbar div:nth-child(2) .social a {
+              margin-top: 10px; } }
   header .navigation {
     align-items: center;
     font-weight: bold;
@@ -4854,17 +4872,17 @@ header {
     justify-content: space-between;
     text-transform: uppercase;
     min-height: 80px;
-    padding: 10px 20px;
     top: 0;
     width: 100%;
     z-index: 3; }
     @media only screen and (max-width: 768px) {
       header .navigation {
         padding: 0;
-        justify-content: space-around; } }
+        justify-content: space-between; } }
     @media only screen and (max-width: 768px) {
       header .navigation .logo {
-        align-self: center; } }
+        align-self: center;
+        margin-right: 10px; } }
     header .navigation .toggle-wrapper {
       display: flex;
       flex-direction: column;
@@ -4940,7 +4958,7 @@ header {
           font-size: 16px;
           min-height: 1000px;
           position: fixed;
-          top: 176px;
+          top: 136px;
           width: 100%; } }
       @media only screen and (max-width: 768px) {
         header .navigation .nav {
@@ -5160,12 +5178,21 @@ header {
   .homepage .connect .enewsletter {
     width: 350px;
     margin-top: 40px; }
+    @media only screen and (max-width: 992px) {
+      .homepage .connect .enewsletter {
+        width: 70%; } }
     .homepage .connect .enewsletter input {
       margin-top: 30px; }
   .homepage .connect .social {
     display: flex;
     margin: 40px 0 0 30px;
     width: 380px; }
+    @media only screen and (max-width: 992px) {
+      .homepage .connect .social {
+        width: 80%; } }
+    @media only screen and (max-width: 768px) {
+      .homepage .connect .social {
+        flex-direction: column; } }
     .homepage .connect .social .facebook-feed {
       background: #fff;
       color: #3667b1;
@@ -5173,6 +5200,7 @@ header {
       font-weight: normal;
       margin-top: 30px;
       min-height: 300px;
+      max-width: 300px;
       padding: 10px; }
       .homepage .connect .social .facebook-feed .logo-box {
         align-items: center;
@@ -5291,14 +5319,26 @@ header {
       max-height: 160px;
       display: flex;
       justify-content: center; }
+      @media only screen and (max-width: 992px) {
+        .internal_wrapper .internal_content_wrapper .testimonial-box {
+          flex-direction: column; } }
+      @media screen and (max-width: 992px) {
+        .internal_wrapper .internal_content_wrapper .testimonial-box {
+          max-height: none;
+          margin: 100px 0 50px;
+          padding: 30px; } }
       .internal_wrapper .internal_content_wrapper .testimonial-box img {
         margin: 0 40px 0 -60px;
         max-width: -webkit-fit-content;
         max-width: -moz-fit-content;
         max-width: fit-content; }
+        @media screen and (max-width: 768px) {
+          .internal_wrapper .internal_content_wrapper .testimonial-box img {
+            margin-top: -80px; } }
       .internal_wrapper .internal_content_wrapper .testimonial-box p {
         font-weight: 800;
-        line-height: 22px; }
+        line-height: 22px;
+        margin-top: 10px; }
       .internal_wrapper .internal_content_wrapper .testimonial-box .name {
         font-weight: 400; }
   .internal_wrapper .wufoo-form-container header {
@@ -5629,7 +5669,7 @@ footer {
           width: 100%; } }
       .timeline .intro .legacy h1 {
         margin-top: 30px;
-        padding-right: 10%;
+        padding: 0 10%;
         line-height: 1em;
         color: #fff;
         font-size: 5em; }

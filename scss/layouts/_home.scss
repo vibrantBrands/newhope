@@ -1,7 +1,6 @@
 
 .homepage {
 
-
 	.ctas {
 		background: $nh-blue;
 	
@@ -199,6 +198,10 @@
 			width: 350px;
 			margin-top: 40px;
 
+			@media only screen and (max-width: $lg-breakpoint) {
+        		width: 70%;
+    		}
+
 			input {
 				margin-top: 30px;
 			}
@@ -209,6 +212,12 @@
 			margin: 40px 0 0 30px;
 			width: 380px;
 
+			@media only screen and (max-width: $lg-breakpoint) {
+        		width: 80%;
+    		}
+
+			@include flex-column-layout($md-breakpoint);
+
 			.facebook-feed {
 				background: $white;
 				color: $nh-blue;
@@ -216,6 +225,7 @@
 				font-weight: normal;
 				margin-top: 30px;
 				min-height: 300px;
+				max-width: 300px;
 				padding: 10px;
 
 				.logo-box {
