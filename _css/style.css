@@ -4642,7 +4642,7 @@ p {
       padding-left: 30px; } }
 
 .content {
-  margin-top: 160px; }
+  margin-top: 138px; }
 
 /* ==========================================================================
    Helper classes
@@ -4869,7 +4869,7 @@ header {
     background: #fff;
     display: flex;
     font-size: 1.3em;
-    justify-content: space-between;
+    justify-content: space-around;
     text-transform: uppercase;
     min-height: 80px;
     top: 0;
@@ -5189,7 +5189,9 @@ header {
     width: 380px; }
     @media only screen and (max-width: 992px) {
       .homepage .connect .social {
-        width: 80%; } }
+        align-items: center;
+        width: 80%;
+        margin-left: 0; } }
     @media only screen and (max-width: 768px) {
       .homepage .connect .social {
         flex-direction: column; } }
@@ -5224,8 +5226,16 @@ header {
       flex-direction: column;
       justify-content: space-between;
       margin-left: 20px;
-      min-height: 300px;
       padding-top: 60px; }
+      @media only screen and (max-width: 768px) {
+        .homepage .connect .social .icons {
+          margin-left: 0;
+          flex-direction: row; }
+          .homepage .connect .social .icons i {
+            background: #36a6dc;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px; } }
 
 .homepage .ccm-image-slider-title {
   position: absolute;
