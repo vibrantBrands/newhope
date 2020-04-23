@@ -4,6 +4,7 @@
 
 .timeline {
 	margin-top: 0;
+	//overflow-x: hidden;
 
 	.intro {
 		background: url('../images/timeline/collage1.jpg') no-repeat;
@@ -68,7 +69,7 @@
 	.years {
 		display: flex;
 		position: sticky;
-		top: 150px;
+		top: 130px;
 		height: 100px;
 		width: 100%;
 		z-index: 5;

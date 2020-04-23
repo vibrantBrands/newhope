@@ -19,7 +19,7 @@ $( document ).ready(function() {
         //$(this).addClass('active');
 
         $('html, body').animate({
-            scrollTop: $( eraArray[$(this).index()] ).first().offset().top - 220
+            scrollTop: $(eraArray[$(this).index()] ).first().offset().top - 220
         });
         
         /*switch($(this).index()){
