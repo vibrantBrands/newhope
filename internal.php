@@ -35,6 +35,12 @@
             $bt->controller->displaySubPageLevelsNum = ''; // if displaySubPages is set 'custom'
             $bt->render('templates/sidebar_nav'); // for template 'templates/template_name';
         ?>
+      <div class="additional-content">
+        <?php
+          $a = new Area("Additional Sidebar Content"); 
+          $a->display($c);
+        ?>
+      </div>
 	</div>
 </section>
 

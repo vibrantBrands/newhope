@@ -164,10 +164,6 @@
 
 		.btn {
 			margin-bottom: 15px;
-
-			@media only screen and (max-width: $md-breakpoint) {
-        		width: 85%;
-    		}
 		}
 	}
 
@@ -282,6 +278,12 @@
 	.ccm-image-slider-title {
 		position: absolute;
 		left: -9999px;
+	}
+
+	.contact {
+		text-align: center;
+		font-size: 1.5em;
+		padding: 50px 10% 30px;
 	}
 	
 }

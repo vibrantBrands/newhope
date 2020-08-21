@@ -15,11 +15,15 @@ $nh-lt-blue: #36a6dc;
 $nh-green: #589d4a;
 $nh-gold: #e0a422;
 $nh-red: #de3a46;
-$hover-color: lighten($nh-blue, 10%);
+$hover-color: lighten($nh-blue, 40%);
 $nav-color: #edf6ff;
+$seventies: #36A6DC;
+$eighties: #589D4A;
+$nineties: #DFA422;
+$aughts: #DE3A46;
 // Menu 
 
-$menu-transition: all .3s ease-out;
+$menu-transition: all .5s ease-out;
 
 // Breakpoints
 
@@ -35,9 +39,10 @@ $content-max-width: 1200px;
 $topbar-height: 50px;
 $topbar-mobile-height: 90px;
 
-$h1-text-size: 24px;
-$h2-text-size: 20px;
-$h3-text-size: 26px;
+$h1-text-size: 28px;
+$h2-text-size: 24px;
+$h3-text-size: 22px;
+$h4-text-size: 20px;
 $text-size: 18px;
 $text-line-height: 34px;
 $timeline-font-size: 20px;
@@ -46,4 +51,4 @@ $timeline-header-size: 35px;
 // Margins
 
 $header-top-margin: 70px;
-$h2-top-margin: 30px;
+$h2-top-margin: 25px;

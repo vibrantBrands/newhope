@@ -94,6 +94,8 @@ class PageTheme extends Theme implements ThemeProviderInterface
             ['title' => t('Red Button'), 'menuClass' => '', 'spanClass' => 'solid-btn', 'forceBlock' => '-1'],
             ['title' => t('Green Button'), 'menuClass' => '', 'spanClass' => 'solid-btn green', 'forceBlock' => '-1'],
             ['title' => t('Slider Text'), 'menuClass' => '', 'spanClass' => 'slider-text', 'forceBlock' => '-1'],
+            ['title' => t('Red Text'), 'menuClass' => '', 'spanClass' => 'red-text', 'forceBlock' => '-1'],
+             ['title' => t('Blue Text'), 'menuClass' => '', 'spanClass' => 'blue-text', 'forceBlock' => '-1'],
         ];
     }
 

@@ -73,4 +73,24 @@ $( document ).ready(function() {
         
     });
 
+    $('.news .carousel').slick({
+        arrows: true,
+        autoplay: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        cssEase: "ease",
+        autoplaySpeed: 1000,
+        pauseOnFocus: false,
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+    });
+
 });

@@ -3,13 +3,13 @@
 <div class="timeline content">
 	<section class="intro">
 		<div class="legacy">
-			<h1>A LEGACY<br />OF TRUST</h1>
+			<h1>A LEGACY OF TRUST</h1>
 		</div>
 		<div class="roots">
-			<h2>Our roots run deep</h2>
-			<p>
-				New Hope was created when a group of family members of people with disabilities wanted to do better than what was available to them. This legacy of excellence and constant improvement to enhance the lives of the people we support continues to drive our work each day.
-			</p>
+			 <?php
+		      $a = new Area("Our History Intro"); 
+		      $a->display($c);
+		    ?>
 		</div>
 	</section>
 	
@@ -62,9 +62,9 @@
 					<div class="timeline-circle"></div>
 
 					<?php if ($counter % 2 == 0) { ?>
-					<article class="timeline-post" data-aos="fade-right">
+					<article class="timeline-post" data-aos="flip-right">
 					<?php } else { ?>
-					<article class="timeline-post" data-aos="fade-left">
+					<article class="timeline-post" data-aos="flip-left">
 					<?php } ?>
 						<span><?php echo $title ?></span>
 						<p>

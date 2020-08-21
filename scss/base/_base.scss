@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Roboto+Condensed:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Roboto+Condensed:200,400,700&display=swap');
 @import '../plugins/fontawesome/fontawesome.scss';
 @import '../plugins/fontawesome/fa-regular.scss';
 @import "../plugins/fontawesome/fa-brands.scss";
@@ -126,19 +126,33 @@ h1, h2, h3 {
 
 h1 {
     font-size: $h1-text-size;
+    margin-bottom: 10px;
 }
 
 h2 {
     font-size: $h2-text-size;
+    margin-bottom: 10px;
 }
 
 h3 {
     font-size: $h3-text-size;
+    margin: 0 0 5px 0;
+}
+
+h4 {
+    font-size: $h4-text-size;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 p {
     font-size: $text-size;
     line-height: $text-line-height;
+    font-weight: 200;
+}
+
+em {
+    font-style: italic;
 }
 
 .btn {
@@ -159,17 +173,46 @@ p {
     background: $nh-red;
     color: $white;
     cursor: pointer;
-    display: flex;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
     font-family: $secondary-font;
     font-size: 18px;
     justify-content: center;
     padding: 15px 25px;
+    transition: background .3s ease-out;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &:hover {
+       background: darken($nh-red, 10%) 
+    }
+
+    &.blue {
+        background: $nh-blue;
+
+        &:hover {
+            background: darken($nh-blue, 10%);
+            color: $white;
+        }
+    }
 
     &.green {
         background: $nh-green;
+
+        &:hover {
+            background: darken($nh-green, 10%) 
+        }
     }
     &.gold {
         background: $nh-gold;
+
+        &:hover {
+            background: darken($nh-gold, 10%) 
+        }
     }
 }
 
@@ -202,7 +245,7 @@ p {
 }
 
 .content {
-    margin-top: 138px;
+    margin-top: 180px;
 }
 
 

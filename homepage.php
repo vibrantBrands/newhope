@@ -11,21 +11,21 @@
 	<section class="ctas">
 		<div class="container">
 			<div>
-				<a href="/">
+				<a href="/contact-us">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_2.png" alt="house icon">
 					<p>Join Our <br />Community</p>
 				</a>
 			</div>
 			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
-				<a href="/">
+				<a href="/support-us/donation">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_3.png" alt="house icon">
 					<p>Make a <br />Donation</p>
 				</a>
 			</div>
 			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
-				<a href="/">
+				<a href="/who-we-are/careers">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_4.png" alt="house icon">
 					<p>Join Our <br />Team</p>
 				</a>
@@ -51,32 +51,43 @@
 		<section class="newhope-info">
 			<div class="container">
 				<div>
-					<img src="<?php echo $this->getThemePath(); ?>/images/hope-farm.png">
-					<div class="title"><p>Hope Farm</p></div>
+					<a href="/our-services/hope-farm">
+						<img src="<?php echo $this->getThemePath(); ?>/images/hope-farm.png">
+						<div class="title"><p>Hope Farm</p></div>
+					</a>
 				</div>
 				<div>
-					<img src="<?php echo $this->getThemePath(); ?>/images/tour.png">
-					<div class="title"><p>Tour Our Campus</p></div>
+					<a href="https://www.youtube.com/watch?v=LBRmzDf0XUw" data-lity>
+						<img src="<?php echo $this->getThemePath(); ?>/images/tour.png">
+						<div class="title"><p>Learn About Us</p></div>
+					</a>
 				</div>
 				<div>
-					<img src="<?php echo $this->getThemePath(); ?>/images/care-coordination.png">
-					<div class="title"><p>Care Coordination</p></div>
+					<a href="/our-services/select-human-services">
+						<img src="<?php echo $this->getThemePath(); ?>/images/care-coordination.png">
+						<div class="title"><p>Select Human Services</p></div>
+					</a>
 				</div>
 				<div>
-					<img src="<?php echo $this->getThemePath(); ?>/images/meet-staff.png">
-					<div class="title"><p>Meet Our Staff</p></div>
+					<a href="/who-we-are/our-staff">
+						<img src="<?php echo $this->getThemePath(); ?>/images/meet-staff.png">
+						<div class="title"><p>Meet Our Staff</p></div>
+					</a>
 				</div>
+			</div>
+			<div class="container contact">
+				<p>For information and for a tour, contact Service Navigators Stephanie Elberth or Scott Whitehead,<br /> at 845-468-5280 or <a href="mailto:services@newhopecommunity.org">services@newhopecommunity.org</a></p>
 			</div>
 		</section>
 		<section class="statistics">
 			<div class="container">
-				<img src="<?php echo $this->getThemePath(); ?>/images/statistics.png">
+				<img src="<?php echo $this->getThemePath(); ?>/images/homepage-stats.svg">
 			</div>
 		</section>
 		<section class="buttons">
 			<div class="container">
 				<button class="btn">Join Our Community</button>
-				<button class="btn">Learn More About Us</button>
+				<a href="/who-we-are"><button class="btn">Learn More About Us</button></a>
 			</div>
 		</section>
 	</div>

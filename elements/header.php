@@ -10,10 +10,10 @@
 
 	    ?>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/lity.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/style.css">
-			<!-- <link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/responsive.css">
-			<link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath(); ?>/_css/typography.css">
-    -->
 
 
 			<?php Loader::element('header_required'); ?> <!-- must be last in load order -->
@@ -28,11 +28,11 @@
       <div><i class="fa fa-phone"></i><a href="tel:8454348300">(845) 434-8300</a></div>
       <div>
         <div class="social">
-          <a href="/"><i class="fa fa-instagram"></i></a>
-          <a href="/"><i class="fa fa-linkedin"></i></a>
-          <a href="/"><i class="fa fa-facebook"></i></a>
-          <a href="/"><i class="fa fa-youtube"></i></a>
-          <a href="/"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/newhope1975/" target="social"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/new-hope-community-inc-/" target="social"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/NewHope1975/" target="social"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.youtube.com/user/newhopecommunity1" target="social"><i class="fa fa-youtube"></i></a>
+          <a href="https://twitter.com/NewHope1975" target="social"><i class="fa fa-twitter"></i></a>
         </div>
         <a class="solid-btn" href="/support-us/donation">DONATE</a>
       </div>
@@ -48,7 +48,7 @@
         <p>MENU</p>
      </div>
      <div class="logo">
-       <a href="/"><img src="<?php echo $this->getThemePath(); ?>/images/nh-logo-blue.png" alt="New Hope Logo"></a>
+       <a href="/"><img src="<?php echo $this->getThemePath(); ?>/images/nh-logo-blue.svg" alt="New Hope Logo"></a>
      </div>
     <!--<ul class="nav">
       <li class="">

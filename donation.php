@@ -2,9 +2,9 @@
 
 <div class="donation-page content">
 		
-	<div class="image-row">
+	<div>
 		<?php
-			$a = new Area("4 Photo Row");
+			$a = new Area("4 Photo Image");
 			$a->display();
 		?>
 	</div>
@@ -16,16 +16,19 @@
 	<div class="container">
 		<section class="donation-text">
 			<div>
-				<img src="<?php echo $this->getThemePath(); ?>/images/donation/top-profile.png" alt="donation image">
+				<?php
+					$a = new Area("Donate Top Image");
+					$a->display();
+				?>
 			</div>
 			<div>
-				<h1><span>DONATE TO</span>
-				<br />NEW HOPE</h1>
-				<p>For more than 40 years, New Hope Community has been driving a culture of independence, inclusion, and innovation for people with intellectual and developmental disabilities. Your tax-deductible donation will help transform lives and support life-changing services. Thank you for making New Hope Community and the people we serve a part of your life.</p>
+				<?php
+					$a = new Area("Donate Text");
+					$a->display();
+				?>
 				<div class="buttons">
-					<a href="/support-us/donate-now"><div class="solid-btn">DONATE NOW</div></a>
-					<a href="/support-us/donate-now"><div class="solid-btn gold">MAKE TRIBUTE</div></a>
-					<div class="solid-btn green">EVENTS</div>
+					<a href="/support-us"><div class="solid-btn green">DONATE NOW</div></a>
+					<a href="/who-we-are/news-events"><div class="solid-btn gold">EVENTS</div></a>
 				</div>
 			</div>
 		</section>
@@ -34,25 +37,25 @@
 		<section class="donation-do">
 			<div>
 				<?php
-					$a = new Area("Image and Text 1");
+					$a = new Area("Donation Use 1");
 					$a->display();
 				?>
 			</div>
 			<div>
 				<?php
-					$a = new Area("Image and Text 2");
+					$a = new Area("Donation Use 2");
 					$a->display();
 				?>
 			</div>
 			<div>
 				<?php
-					$a = new Area("Image and Text 3");
+					$a = new Area("Donation Use 3");
 					$a->display();
 				?>
 			</div>
 			<div>
 				<?php
-					$a = new Area("Image and Text 4");
+					$a = new Area("Donation Use 4");
 					$a->display();
 				?>
 			</div>
@@ -88,28 +91,35 @@
 	</div>
 </div>
 
-<section class="ways-to-participate">
-	<h2>Ways to Participate</h2>
+
+
+<section class="ctas">
 	<div class="container">
-		<div class="blue">
-			<img src="<?php echo $this->getThemePath(); ?>/images/donation/golf-outing.png">
-			<div class="title"><p>GOLF OUTING</p></div>
+		<div>
+			<a class="solid-btn blue" href="/support-us/donation">SPECIAL GIFTS</a>
 		</div>
-		<div class="blue">
-			<img src="<?php echo $this->getThemePath(); ?>/images/donation/annual-gala.png">
-			<div class="title"><p>ANNUAL GALA</p></div>
+		<div>
+			<a class="solid-btn blue" href="/support-us/donation">GIFT OF STOCK</a>
 		</div>
-		<div class="blue">
-			<img src="<?php echo $this->getThemePath(); ?>/images/donation/family-bbq.png">
-			<div class="title"><p>FAMILY BBQ</p></div>
+		<div>
+			<a class="solid-btn blue" href="/support-us/donation">PLANNED GIVING</a>
+		</div>
+		<div>
+			<a class="solid-btn blue" href="/support-us/donation">EVENTS</a>
 		</div>
 	</div>
 </section>
 
+<div class="container additional-info">
+	<p>For additional information, please contact<br />Thomas Burnham, Executive Director<br /> 845-434-8300, ext. 223</br> <a href="mailto:tburnham@newhopecommunity.org">tburnham@newhopecommunity.org</a></p>
+
+</div>
+
+
 <section class="hope-farm">
 	<div class="support-cta">
 		<div class="hope-farm-icon">
-			<img src="<?php echo $this->getThemePath(); ?>/images/donation/hope-farm-icon.png">
+			<img src="<?php echo $this->getThemePath(); ?>/images/donation/hope-farm-icon.jpg">
 		</div>
 		<div class="hope-text">
 			<p>SUPPORT<br /><span>HOPE FARM</span></p>

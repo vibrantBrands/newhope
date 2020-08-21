@@ -99,6 +99,10 @@ header {
 		}
 
 		.logo {
+			height: auto;
+			margin: 10px 0;
+			width: 200px;
+
 			@media only screen and (max-width: $md-breakpoint) {
 				align-self: center;
 				margin-right: 10px;
@@ -201,6 +205,7 @@ header {
             display: flex;
             font-weight: 700;
             justify-content: flex-end;
+            padding-left: 0;
             text-align: right;
             z-index: 10;
 
@@ -210,12 +215,12 @@ header {
 
             @media screen and (max-width: $md-breakpoint) {
                 align-items: flex-end;
-                background: black;
+                background: $nh-blue;
                 display: none;
                 font-size: 16px;
                 min-height: 1000px;
                 position: fixed;
-                top: 136px;
+                top: 185px;
                 width: 100%;
             }
 
@@ -230,7 +235,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                margin: 0 20px 0;
+                margin: 0 3px 0;
                 padding: 0 10px;
                 text-align: left;
                 text-decoration: none;
@@ -245,25 +250,41 @@ header {
                     overflow: hidden;
                     padding: 0;
                     position: absolute;
-                    top: 120px;
+                    top: 140px;
                     transition: all .4s ease-out;
                     z-index: 2;
 
-                    .nav-item {
-                    	background: $nh-blue;
-                    	border: $white 1px solid;
+                    >.nav-item {
+                    	//background: $nh-blue;
+						/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#36a6dc+0,36a6dc+47,36a6dc+47,3667b1+47,3667b1+100 */
+						background: $nh-blue; /* Old browsers */
+						transition: all .2s ease-out;
                     	border-top: 0;
+                    	border: $white 1px solid;
                     	padding: 10px;
                     	position: relative;
 
                     	a {
                     		color: $nav-color;
-                    		
-                    		&:hover {
-								color: white;
-								background: $nh-lt-blue;
-                    		}
                     	}
+
+                    	&:hover {
+                    		background: #edf6ff;
+
+                			a {
+                				color: $nh-blue;
+                				display: block;
+                				height: 100%;
+                				width: 100%;
+                			}
+                		}
+
+                		&.dropdown {
+                			&:hover {
+                				background: $nav-color;
+                			}
+
+                		}
                     }
 
                     .submenu {
@@ -272,8 +293,17 @@ header {
 
                     	.nav-item {
                     		color: white;
-                    		list-style-type: disc;
+                    		margin-bottom: 0;
+                    		padding: 5px 0 5px 20px;
                     		border: 0;
+
+                    		&:hover {
+                    			background: $nh-blue;
+                 				
+                 				a {
+                 					color: $nav-color;
+                 				}
+                    		}
                     	}
                     }
 
