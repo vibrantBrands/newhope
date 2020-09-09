@@ -11,7 +11,7 @@
 	<section class="ctas">
 		<div class="container">
 			<div>
-				<a href="/contact-us">
+				<a href="/who-we-are/contact-us">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_2.png" alt="house icon">
 					<p>Join Our <br />Community</p>
 				</a>
@@ -32,7 +32,7 @@
 			</div>
 			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
-				<a href="/">
+				<a href="https://www.facebook.com/NewHope1975/" target="_blank">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_5.png" alt="house icon">
 					<p>Tell Your <br />Friends</p>
 				</a>
@@ -57,7 +57,7 @@
 					</a>
 				</div>
 				<div>
-					<a href="https://www.youtube.com/watch?v=LBRmzDf0XUw" data-lity>
+					<a href="https://vimeo.com/452189846" data-lity>
 						<img src="<?php echo $this->getThemePath(); ?>/images/tour.png">
 						<div class="title"><p>Learn About Us</p></div>
 					</a>
@@ -86,7 +86,9 @@
 		</section>
 		<section class="buttons">
 			<div class="container">
-				<button class="btn">Join Our Community</button>
+				<a href="/who-we-are/contact-us">
+					<button class="btn">Join Our Community</button>
+				</a>
 				<a href="/who-we-are"><button class="btn">Learn More About Us</button></a>
 			</div>
 		</section>
@@ -120,11 +122,13 @@
 						
 					</div>
 					<div class="icons">
-						<i class="fa fa-instagram"></i>
-						<a href="https://www.linkedin.com/company/new-hope-community-inc-/about/"><i class="fa fa-linkedin"></i></a>
-						<a href="https://www.facebook.com/NewHope1975/"><i class="fa fa-facebook"></i></a>
-						<a href="https://www.youtube.com/user/newhopecommunity1"><i class="fa fa-youtube"></i></a>
-						<a href="https://twitter.com/NewHope1975"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.instagram.com/newhope1975" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+						<a href="https://www.linkedin.com/company/new-hope-community-inc-/about/" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.facebook.com/NewHope1975/" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://www.youtube.com/user/newhopecommunity1" target="_blank"><i class="fa fa-youtube"></i></a>
+						<a href="https://twitter.com/NewHope1975" target="_blank"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>

@@ -42,6 +42,7 @@
               $title = $page->getCollectionName();
               $description = $page->getCollectionDescription();
               $thumbnail = $page->getAttribute('thumbnail');
+              $excerpt = substr($description, 0, 95);
 
               if($page->getAttribute('event_date')) {
                 $date = $page->getAttribute('event_date');
@@ -66,7 +67,7 @@
                     <?php echo $title; ?>
                     </a>
                     </h3>
-                  <p><?php echo $description; ?></p>
+                  <p><?php echo $excerpt ?>...</p>
                 </div>
                 <div class="date">
                   <?php echo $date; ?>
@@ -128,7 +129,7 @@
 		<?php
       $list = new \Concrete\Core\Page\PageList();
       $list->filterByPageTypeHandle(['news','event']);
-      $list->sortByPublicDateDescending();
+      $list->sortByDisplayOrder();
       $pages = $list->getResults();
 
       foreach($pages as $page) {

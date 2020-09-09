@@ -96,27 +96,43 @@
 <section class="ctas">
 	<div class="container">
 		<div>
-			<a class="solid-btn blue" href="/support-us/donation">SPECIAL GIFTS</a>
+			<?php
+				$a = new Area("Donation Button 1");
+				$a->display();
+			?>
 		</div>
 		<div>
-			<a class="solid-btn blue" href="/support-us/donation">GIFT OF STOCK</a>
+			<?php
+				$a = new Area("Donation Button 2");
+				$a->display();
+			?>
 		</div>
 		<div>
-			<a class="solid-btn blue" href="/support-us/donation">PLANNED GIVING</a>
+			<?php
+				$a = new Area("Donation Button 3");
+				$a->display();
+			?>
 		</div>
 		<div>
-			<a class="solid-btn blue" href="/support-us/donation">EVENTS</a>
+			<?php
+				$a = new Area("Donation Button 4");
+				$a->display();
+			?>
 		</div>
 	</div>
 </section>
 
 <div class="container additional-info">
-	<p>For additional information, please contact<br />Thomas Burnham, Executive Director<br /> 845-434-8300, ext. 223</br> <a href="mailto:tburnham@newhopecommunity.org">tburnham@newhopecommunity.org</a></p>
+	<?php
+		$a = new Area("Contact Info");
+		$a->display();
+	?>
+	
 
 </div>
 
 
-<section class="hope-farm">
+<!-- <section class="hope-farm">
 	<div class="support-cta">
 		<div class="hope-farm-icon">
 			<img src="<?php echo $this->getThemePath(); ?>/images/donation/hope-farm-icon.jpg">
@@ -125,6 +141,6 @@
 			<p>SUPPORT<br /><span>HOPE FARM</span></p>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <?php require('elements/footer.php'); ?>
