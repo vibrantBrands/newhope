@@ -1,0 +1,269 @@
+.page-template-timeline {
+	//width: 100%;
+}
+
+.timeline {
+	margin-top: 0;
+	//overflow-x: hidden;
+
+	.intro {
+		background: url('../images/timeline/collage1.jpg') no-repeat;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		height: 900px;
+		align-items: center;
+		min-height: 100vh;
+		position: relative;
+		background-attachment: fixed;
+		background-position: 100% 150px;
+		background-repeat: no-repeat;
+
+		.legacy {
+			background-color: rgba(0, 0, 0, .7);
+			margin-top: 80px;
+			text-align: right;
+			right: 0;
+			top: 90px;
+			width: 100%;
+
+
+			@media only screen and (max-width: $md-breakpoint) {
+				width: 100%;
+			}
+
+			h1 {
+				margin-top: 30px;
+				line-height: 1em;
+				color: $white;
+				font-size: 5em;
+				text-align: center;
+			}
+		}
+
+		.roots {
+			color: $white;
+			background-color: rgba(54, 103, 177, .9);
+			padding: 50px;
+			right: 0;
+			margin-top: 80px;
+			width: 60%;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				width: 100%;
+			}
+
+			h2 {
+				color: $white;
+				font-size: 3.8em;
+				line-height: 55px;
+				margin: 30px 0 30px auto;
+				text-align: center;
+			}
+
+			p {
+				font-size: $timeline-font-size;
+				line-height: 28px;
+				text-align: center;
+			}
+		}
+	}
+
+	.years {
+		display: flex;
+		position: sticky;
+		top: 190px;
+		height: 100px;
+		width: 100%;
+		z-index: 5;
+
+		@media only screen and (max-width: $md-breakpoint) {
+			top: 175px;
+		}
+
+		div {
+			align-items: center;
+			background: $black;
+			color: $white;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			font-size: 1em;
+			justify-content: center;
+			text-align: center;
+			width: 25%;
+
+			&.active {
+				background: $nh-blue;
+			}
+
+			&:first-child {
+				border-bottom: $seventies 12px solid;
+			}
+
+			&:nth-child(2) {
+				border-bottom: $eighties 12px solid;
+			}
+
+			&:nth-child(3) {
+				border-bottom: $nineties 12px solid;
+			}
+
+			&:nth-child(4) {
+				border-bottom: $aughts 12px solid;
+			}
+
+			@media only screen and (max-width: $md-breakpoint) {
+				font-size: .8em;
+			}
+
+			span {
+				font-size: 2em;
+			}
+
+			&.active {
+				//border: 1px solid $white;
+			}
+		}
+	}
+
+	.dateboxes {
+		position: relative;
+
+		/*&:before {
+			content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 50%;
+		    height: 100%;
+		    width: 15px;
+		    background: #000;
+		    z-index: 1;
+
+		    @media only screen and (max-width: $lg-breakpoint) {
+				left: 15%;
+			}
+		}*/
+	}
+	
+	.timeline-list {
+		background: none;
+		list-style-type: none;
+		padding: 0;
+		overflow: auto;
+
+		li {
+			border-bottom: 8px solid white;
+
+			&:nth-child(odd) {
+			
+				.timeline-post {
+	    			padding: 3.5rem 6rem 3.5rem 17rem;
+	    			top: 50%;
+	    			right: 0;
+
+	    			@media only screen and (max-width: $lg-breakpoint) {
+						padding: 3.5rem 4rem 3.5rem 32%;
+						width: 100%;
+					}
+				}
+
+				.timeline-circle {
+					left: 39%;
+
+					@media only screen and (max-width: $lg-breakpoint) {
+						left: 15%;
+					}
+				}
+			}
+
+			.timeline-circle {
+				left: 59%;
+			}
+			
+			.timeline-bg {
+				background-size: cover;
+			    min-height: 100vh;
+			    position: relative;
+			    background-attachment: fixed;
+			    background-position: 100% 173px;
+			    background-repeat: no-repeat;
+			}
+
+			.timeline-post {
+				background-color: rgba(54, 103, 177, .9);
+				color: $white;
+				margin-top: -125px;
+				width: 60%;
+    			height: 250px;
+    			padding: 3.5rem 15rem 3.5rem 6rem;
+    			position: absolute;
+    			top: 50%;
+    			z-index: 3;
+
+    			@media only screen and (max-width: $lg-breakpoint) {
+					padding: 3.5rem 4rem 5.5rem 32%;
+					height: 280px;
+					width: 100%;
+				}
+
+				p {
+					font-size: $timeline-font-size;
+					margin-top: 10px;
+					line-height: 22px;
+				}
+
+				span {
+					font-size: $timeline-header-size;
+					font-weight: bold;
+				}
+			}
+
+			.timeline-circle {
+				background: #c05c4d;
+				display: block;
+				position: absolute;
+			    -moz-transform: translateX(-40%);
+			    -ms-transform: translateX(-40%);
+			    -o-transform: translateX(-40%);
+			    -webkit-transform: translateX(-40%);
+			    border-radius: 50%;
+			    //border: 3px solid #fff;
+			    bottom: 45%;
+			    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			    height: 80px;
+			    //left: 50%;
+			    transform: translateX(-40%);
+			    transition: left 1s ease-out;
+			    width: 80px;
+			    z-index: 4;
+
+			    @media only screen and (max-width: $lg-breakpoint) {
+					left: 15%;
+				}
+			}
+		}
+
+		.seventies {
+			.timeline-circle {
+				background: $seventies;
+			}
+		}
+		.eighties {
+			.timeline-circle {
+				background: $eighties;
+			}
+		}
+		.nineties {
+			.timeline-circle {
+				background: $nineties;
+			}
+		}
+		.aughts {
+			.timeline-circle {
+				background: $aughts;
+			}
+		}
+	}
+}

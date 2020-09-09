@@ -1,0 +1,44 @@
+.slick-slider {
+
+	.slick-arrow {
+		top: -2%;
+	}
+
+	.slick-prev {
+		left: inherit;
+		right: 22%;
+
+		@media screen and (max-width: $lg-breakpoint){
+			right: 54%;
+		}
+	}
+
+	.slick-next {
+		left: inherit;
+		right: 18%;
+
+		@media screen and (max-width: $lg-breakpoint){
+			right: 45%;
+		}
+	}
+
+	.slick-arrow {
+
+		&:before {
+			color: $black;
+		}
+	}
+
+	.slick-slide {
+		padding: 10px;
+
+		>div {
+			border: 1px solid #999;
+
+			.description {
+				min-height: 220px;
+				padding: 20px;
+			}
+		}
+	}
+}
