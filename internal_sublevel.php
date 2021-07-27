@@ -11,7 +11,7 @@
            <img src='<?php echo $image_src; ?>'>
            
        <?php else: ?>
-           <img src='<?php echo $this->getThemePath() ?>/images/internal/placeholder.png' alt='New Hope Community'>
+           <img src='<?php echo $this->getThemePath() ?>/images/placeholder.png' alt='New Hope Community'>
            
        <?php endif; ?>
        

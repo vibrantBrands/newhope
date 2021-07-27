@@ -1,6 +1,21 @@
 
 .homepage {
 
+	.emergency-alert {
+			background: $nh-red;
+			color: $white;
+
+			h1, h2, h3, h4 {
+				padding-top: 40px;
+				color: $white;
+				text-align: center;
+			}
+			p {
+				padding-bottom: 40px;
+			}
+		}
+
+
 	.ctas {
 		background: $nh-blue;
 	
@@ -82,7 +97,9 @@
 			@include flex-column-layout($lg-breakpoint);
 
 			>div {
+				border: 1px solid $white;
 				margin-top: 30px;
+				//position: relative;
 				width: 247px;
 
 				@media only screen and (max-width: $md-breakpoint) {
@@ -113,6 +130,28 @@
 						background: $nh-red;
 					}
 				}
+
+				.select-services {
+					/*display: block;
+					position: relative;
+					height: 100%;
+					width: 100%;*/
+
+					.hover-image {
+						display: none;
+					}
+
+					&:hover {
+
+						.main-image {
+							display: none;
+						}
+						.hover-image {
+							display: block;
+
+						}
+					}
+				}
 			}
 
 			.title {
@@ -138,7 +177,7 @@
 		background: url('../images/background.png') no-repeat;
 		background-size: cover;
 		height: auto;
-		min-height: 1100px;
+		min-height: 1250px;
 		width: 100%;
 	}
 
@@ -188,6 +227,10 @@
 
 		i {
 			margin-right: 10px;
+		}
+
+		iframe {
+			margin-top: 25px;
 		}
 
 		.enewsletter {
@@ -284,6 +327,10 @@
 		text-align: center;
 		font-size: 1.5em;
 		padding: 50px 10% 30px;
+	}
+
+	.slideshow {
+		margin-top: -14px;
 	}
 	
 }

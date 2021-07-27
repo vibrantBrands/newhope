@@ -77,7 +77,7 @@ $( document ).ready(function() {
         arrows: true,
         autoplay: false,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         cssEase: "ease",
         autoplaySpeed: 1000,

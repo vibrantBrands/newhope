@@ -1,0 +1,36 @@
+
+html.embed {
+	background: none;
+}
+
+.wufoo .info {
+	display: none;
+}
+
+.wufoo label {
+	display: none !important;
+}
+
+.wufoo input {
+	padding: 8px !important;
+}
+
+.wufoo li.focused {
+	background: none !important;
+	border: 1px solid white !important;
+}
+
+#saveForm {
+	background: #e0a422;
+	border: none;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.confirm h2 {
+	color: #ffffff;
+	font-size: 16px;
+	padding: 25px 0;
+}
+
+

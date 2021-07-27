@@ -1,6 +1,14 @@
 <?php require('elements/header.php'); ?>
 
 <div class="homepage content">
+	  <div class="emergency-alert">
+      <div class="container">
+          <?php
+          $a = new Area("Emergency Alert Message");
+          $a->display();
+          ?>
+      </div>    
+    </div>
 	<section class="slideshow">
 		<?php
 			$a = new Area("Photo Slider");
@@ -12,28 +20,30 @@
 		<div class="container">
 			<div>
 				<a href="/who-we-are/contact-us">
-					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_2.png" alt="house icon">
+					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_5.png" alt="house icon">
 					<p>Join Our <br />Community</p>
 				</a>
 			</div>
-			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
+			<div>
+				<img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
 				<a href="/support-us/donation">
 					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_3.png" alt="house icon">
 					<p>Make a <br />Donation</p>
 				</a>
 			</div>
-			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
+			<div>
+				<img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
 				<a href="/who-we-are/careers">
-					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_4.png" alt="house icon">
+					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_2.png" alt="join our team">
 					<p>Join Our <br />Team</p>
 				</a>
 			</div>
 			<div><img src="<?php echo $this->getThemePath(); ?>/images/divider.png"></div>
 			<div>
 				<a href="https://www.facebook.com/NewHope1975/" target="_blank">
-					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_5.png" alt="house icon">
+					<img src="<?php echo $this->getThemePath(); ?>/images/vector-smart-object_4.png" alt="tell your friends">
 					<p>Tell Your <br />Friends</p>
 				</a>
 			</div>
@@ -57,14 +67,15 @@
 					</a>
 				</div>
 				<div>
-					<a href="https://vimeo.com/452189846" data-lity>
+					<a href="/who-we-are">
 						<img src="<?php echo $this->getThemePath(); ?>/images/tour.png">
 						<div class="title"><p>Learn About Us</p></div>
 					</a>
 				</div>
 				<div>
-					<a href="/our-services/select-human-services">
-						<img src="<?php echo $this->getThemePath(); ?>/images/care-coordination.png">
+					<a href="/our-services/select-human-services" class="select-services">
+						<img src="<?php echo $this->getThemePath(); ?>/images/SHS.jpg" class="main-image">
+						<img src="<?php echo $this->getThemePath(); ?>/images/SHS_hover.jpg" class="hover-image"> 
 						<div class="title"><p>Select Human Services</p></div>
 					</a>
 				</div>
@@ -99,9 +110,7 @@
 			<div class="container">
 				<div class="enewsletter">
 					<i class="fa fa-newspaper"></i><span>E-newsletter</span>
-						<input type="text" placeholder="First Name" />
-						<input type="text" placeholder="Last Name" />
-						<input type="email" placeholder="Email" />
+						<div id="wufoo-z1sflf980meryhw"> Fill out my <a href="https://vibrantcreative.wufoo.com/forms/z1sflf980meryhw">online form</a>. </div> <script type="text/javascript"> var z1sflf980meryhw; (function(d, t) { var s = d.createElement(t), options = { 'userName':'vibrantcreative', 'formHash':'z1sflf980meryhw', 'autoResize':true, 'height':'380', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { z1sflf980meryhw = new WufooForm(); z1sflf980meryhw.initialize(options); z1sflf980meryhw.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script');</script>
 				</div>
 				<div class="social">
 					<div>

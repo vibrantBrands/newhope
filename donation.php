@@ -1,4 +1,4 @@
-<?php require('elements/header.php'); ?>
+<?php require('elements/header_foundation.php'); ?>
 
 <div class="donation-page content">
 		
@@ -65,7 +65,7 @@
 	<div class="story-wrapper">
 		<div class="container">
 	
-		<div class="bar red">Our Stories</div>
+		<!-- <div class="bar red">Our Stories</div>
 			<section class="our-stories">
 				<div class="container">
 					<div>
@@ -81,7 +81,7 @@
 						<div class="title"><p>MEET RANDALL</p></div>
 					</div>
 				</div>
-			</section>
+			</section>  -->
 
 			<div class="quote">
 				<img src="<?php echo $this->getThemePath(); ?>/images/donation/begin-quote.png" class="quote-mark left">

@@ -36,9 +36,89 @@
 			border: 1px solid #999;
 
 			.description {
-				min-height: 220px;
+				min-height: 250px;
 				padding: 20px;
 			}
 		}
 	}
+
+	.photo {
+		height: 250px;
+	}
 }
+
+
+.ccm-search-block-form {
+
+	.ccm-search-block-text {
+		max-width: 150px;
+	}
+	h3 {
+		margin-top: 0;
+	}
+	input[type="submit"] {
+		color: $white;
+		padding: 10px 20px;
+	}
+}
+
+.two-col,
+.four-col {
+	display: flex;
+	margin-top: 50px;
+
+	>div {
+		margin: 0 5%;
+
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+
+		h2, h3 {
+			background: $nh-blue;
+			color: $white;
+			font-size: 24px;
+			margin: 0;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+}
+
+.two-col {
+
+	>div {
+		margin: 0 5%;
+	}
+}
+
+.four-col {
+	justify-content: space-around;
+	width: 100%;
+
+	>div {
+		margin: 0 5px;
+	}
+}
+
+.image-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
+		width: 100%;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+	        flex-direction: column;
+	    }
+
+		div {
+			width: 25%;
+
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}	
+	}
+

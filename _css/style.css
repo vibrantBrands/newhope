@@ -4672,6 +4672,9 @@ em {
 
 .content {
   margin-top: 180px; }
+  @media only screen and (max-width: 992px) {
+    .content {
+      margin-top: 250px; } }
 
 /* ==========================================================================
    Helper classes
@@ -4866,8 +4869,65 @@ em {
   .slick-slider .slick-slide > div {
     border: 1px solid #999; }
     .slick-slider .slick-slide > div .description {
-      min-height: 220px;
+      min-height: 250px;
       padding: 20px; }
+
+.slick-slider .photo {
+  height: 250px; }
+
+.ccm-search-block-form .ccm-search-block-text {
+  max-width: 150px; }
+
+.ccm-search-block-form h3 {
+  margin-top: 0; }
+
+.ccm-search-block-form input[type="submit"] {
+  color: #fff;
+  padding: 10px 20px; }
+
+.two-col,
+.four-col {
+  display: flex;
+  margin-top: 50px; }
+  .two-col > div,
+  .four-col > div {
+    margin: 0 5%; }
+    .two-col > div a,
+    .four-col > div a {
+      color: #fff;
+      text-decoration: none; }
+    .two-col > div h2, .two-col > div h3,
+    .four-col > div h2,
+    .four-col > div h3 {
+      background: #3667b1;
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+      padding: 10px;
+      text-align: center; }
+
+.two-col > div {
+  margin: 0 5%; }
+
+.four-col {
+  justify-content: space-around;
+  width: 100%; }
+  .four-col > div {
+    margin: 0 5px; }
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%; }
+  @media only screen and (max-width: 992px) {
+    .image-row {
+      flex-direction: column; } }
+  .image-row div {
+    width: 25%; }
+    .image-row div img {
+      height: auto;
+      width: 100%; }
 
 .red-text {
   color: #de3a46; }
@@ -4882,16 +4942,18 @@ header {
   width: 100%;
   z-index: 100; }
   header .topbar {
+    align-items: center;
     background: #3667b1;
-    height: 50px;
-    display: flex;
     color: #fff;
+    display: flex;
     font-size: 1.2em;
-    justify-content: space-between;
-    align-items: center; }
+    height: 50px;
+    justify-content: space-between; }
     @media only screen and (max-width: 768px) {
       header .topbar {
         align-items: center;
+        flex-direction: column;
+        padding-bottom: 10px;
         height: auto;
         justify-content: space-around; } }
     header .topbar .fa-phone {
@@ -4926,13 +4988,29 @@ header {
             padding: 10px 0; }
             header .topbar div:nth-child(2) .social a {
               margin-top: 10px; } }
+    header .topbar .searchbox {
+      display: flex;
+      margin: 10px auto;
+      max-width: 300px; }
+      header .topbar .searchbox input[type="submit"] {
+        background: #de3a46;
+        color: #fff;
+        padding: 10px 20px; }
+      header .topbar .searchbox form {
+        display: flex;
+        align-items: center; }
+        header .topbar .searchbox form input {
+          margin: 0 5px; }
+        header .topbar .searchbox form h3 {
+          color: #fff;
+          margin-top: 0; }
   header .navigation {
     align-items: center;
     font-weight: bold;
     background: #fff;
     display: flex;
     font-size: 1.3em;
-    justify-content: space-around;
+    justify-content: space-between;
     text-transform: uppercase;
     min-height: 80px;
     top: 0;
@@ -4944,12 +5022,29 @@ header {
         justify-content: space-between; } }
     header .navigation .logo {
       height: auto;
-      margin: 10px 0;
-      width: 200px; }
+      margin: 10px 0 0 2%;
+      width: 180px; }
       @media only screen and (max-width: 768px) {
         header .navigation .logo {
           align-self: center;
-          margin-right: 10px; } }
+          margin-right: 10px;
+          max-width: 120px; } }
+    header .navigation .amazon-logo {
+      margin-top: -15px;
+      max-width: 180px; }
+      @media only screen and (max-width: 768px) {
+        header .navigation .amazon-logo {
+          max-width: 180px;
+          position: absolute;
+          top: 160px;
+          left: 100px; } }
+    header .navigation .right-nav {
+      display: flex; }
+      @media only screen and (max-width: 768px) {
+        header .navigation .right-nav {
+          width: 100%;
+          position: absolute;
+          top: 0; } }
     header .navigation .toggle-wrapper {
       display: flex;
       flex-direction: column;
@@ -5007,11 +5102,14 @@ header {
           -webkit-transform: rotate(0);
                   transform: rotate(0);
           top: 80%; }
+    header .navigation.support .nav {
+      margin-right: 0 !important; }
     header .navigation .nav {
       align-items: center;
       display: flex;
       font-weight: 700;
       justify-content: flex-end;
+      margin-right: 10%;
       padding-left: 0;
       text-align: right;
       z-index: 10; }
@@ -5026,13 +5124,34 @@ header {
           font-size: 16px;
           min-height: 1000px;
           position: fixed;
-          top: 185px;
+          top: 235px;
           width: 100%; } }
       @media only screen and (max-width: 768px) {
         header .navigation .nav {
           flex-direction: column; } }
       header .navigation .nav.active {
         display: block; }
+      header .navigation .nav > .dropdown {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2; }
+        header .navigation .nav > .dropdown:after {
+          content: ' ';
+          width: 0px;
+          height: 0px;
+          background-color: transparent;
+          position: absolute;
+          border-top: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 15px solid #3667b1;
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+          display: none;
+          margin-left: 50px;
+          top: 118px; }
+        header .navigation .nav > .dropdown:hover:after {
+          display: block; }
       header .navigation .nav > li {
         color: #3667b1;
         display: flex;
@@ -5040,69 +5159,114 @@ header {
         justify-content: flex-start;
         margin: 0 3px 0;
         padding: 0 10px;
-        text-align: left;
+        text-align: center;
         text-decoration: none; }
         header .navigation .nav > li a {
           text-decoration: none; }
         header .navigation .nav > li > .submenu {
+          background: #3667b1;
+          -webkit-column-count: 2;
+             -moz-column-count: 2;
+                  column-count: 2;
+          margin: -1px 0 0 -200px;
           max-height: 0;
-          margin-top: -1px;
           overflow: hidden;
-          padding: 0;
           position: absolute;
           top: 140px;
           transition: all .4s ease-out;
           z-index: 2; }
+          @media screen and (max-width: 992px) {
+            header .navigation .nav > li > .submenu {
+              background: #3667b1;
+              border-top: 1px solid #fff;
+              -webkit-column-count: 1;
+                 -moz-column-count: 1;
+                      column-count: 1;
+              padding: 0; } }
+          header .navigation .nav > li > .submenu:after {
+            border-bottom-color: #3667b1;
+            border-color: rgba(54, 103, 177, 0);
+            border-width: 15px;
+            border: solid transparent;
+            content: "";
+            height: 0;
+            left: 50%;
+            margin-left: -15px;
+            pointer-events: none;
+            position: absolute;
+            width: 0;
+            bottom: 100%; }
+          header .navigation .nav > li > .submenu.one {
+            margin-left: -200px; }
+          header .navigation .nav > li > .submenu.two {
+            margin-left: 50px; }
           header .navigation .nav > li > .submenu > .nav-item {
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#36a6dc+0,36a6dc+47,36a6dc+47,3667b1+47,3667b1+100 */
             background: #3667b1;
             /* Old browsers */
+            border-bottom: 1px solid #36A6DC;
+            margin-right: 20px;
+            text-align: left;
             transition: all .2s ease-out;
-            border-top: 0;
-            border: #fff 1px solid;
-            padding: 10px;
             position: relative; }
+            @media screen and (max-width: 992px) {
+              header .navigation .nav > li > .submenu > .nav-item {
+                background: #3667b1;
+                -webkit-column-count: 1;
+                   -moz-column-count: 1;
+                        column-count: 1;
+                padding: 4px 0; } }
+            header .navigation .nav > li > .submenu > .nav-item:last-child {
+              border: none; }
             header .navigation .nav > li > .submenu > .nav-item a {
-              color: #edf6ff; }
-            header .navigation .nav > li > .submenu > .nav-item:hover {
-              background: #edf6ff; }
-              header .navigation .nav > li > .submenu > .nav-item:hover a {
-                color: #3667b1;
-                display: block;
-                height: 100%;
-                width: 100%; }
-            header .navigation .nav > li > .submenu > .nav-item.dropdown:hover {
-              background: #edf6ff; }
-          header .navigation .nav > li > .submenu .submenu {
-            margin-bottom: 0;
-            margin-top: 10px; }
-            header .navigation .nav > li > .submenu .submenu .nav-item {
-              color: white;
-              margin-bottom: 0;
-              padding: 5px 0 5px 20px;
-              border: 0; }
-              header .navigation .nav > li > .submenu .submenu .nav-item:hover {
+              color: #edf6ff;
+              display: block;
+              padding: 10px; }
+            header .navigation .nav > li > .submenu > .nav-item:hover > a {
+              color: #fc0; }
+            header .navigation .nav > li > .submenu > .nav-item > .submenu {
+              background: #3667b1; }
+              header .navigation .nav > li > .submenu > .nav-item > .submenu > .nav-item {
                 background: #3667b1; }
-                header .navigation .nav > li > .submenu .submenu .nav-item:hover a {
-                  color: #edf6ff; }
+                header .navigation .nav > li > .submenu > .nav-item > .submenu > .nav-item > a {
+                  padding: 5px; }
+          header .navigation .nav > li > .submenu .submenu {
+            background: #3667b1; }
+            header .navigation .nav > li > .submenu .submenu .nav-item {
+              background: #3667b1;
+              color: white;
+              font-weight: normal;
+              margin-bottom: 0;
+              padding-left: 20px;
+              border: 0; }
+              header .navigation .nav > li > .submenu .submenu .nav-item a:hover {
+                color: #fc0; }
           @media screen and (max-width: 768px) {
             header .navigation .nav > li > .submenu {
-              max-width: 60%;
+              background: #3667b1;
+              max-width: 70%;
               right: 0;
               top: 0; }
               header .navigation .nav > li > .submenu > .nav-item {
-                border-top: 1px solid white;
-                border-left: 1px solid white;
+                background: #3667b1;
                 margin-top: 0;
                 padding: 0; }
+                header .navigation .nav > li > .submenu > .nav-item a {
+                  border-left: 1px solid #fff;
+                  border-right: 1px solid #fff;
+                  border-bottom: 1px solid #fff;
+                  align-items: center;
+                  display: flex; }
                 header .navigation .nav > li > .submenu > .nav-item:last-child {
                   border-bottom: 1px solid white; }
                 header .navigation .nav > li > .submenu > .nav-item a {
                   padding: 0 10px; }
               header .navigation .nav > li > .submenu .submenu {
                 display: none; } }
-        header .navigation .nav > li:hover .submenu {
-          max-height: 800px; }
+        header .navigation .nav > li:hover > .submenu {
+          background: #3667b1;
+          max-height: 800px;
+          padding: 10px;
+          z-index: 10; }
         @media screen and (max-width: 768px) {
           header .navigation .nav > li {
             background: #3667b1;
@@ -5118,11 +5282,29 @@ header {
               color: white;
               display: flex;
               height: 60px;
-              width: 100%; }
+              width: 100%; } }
+    @media screen and (max-width: 768px) and (max-width: 992px) {
+      header .navigation .nav > li a {
+        height: 40px; } }
+        @media screen and (max-width: 768px) {
               header .navigation .nav > li a:hover {
-                color: white; }
+                color: white; } }
+  @media screen and (max-width: 768px) and (max-width: 992px) {
+    header .navigation .nav > li > a {
+      height: 60px; } }
+        @media screen and (max-width: 768px) {
             header .navigation .nav > li:hover {
               background: #36a6dc; } }
+
+.homepage .emergency-alert {
+  background: #de3a46;
+  color: #fff; }
+  .homepage .emergency-alert h1, .homepage .emergency-alert h2, .homepage .emergency-alert h3, .homepage .emergency-alert h4 {
+    padding-top: 40px;
+    color: #fff;
+    text-align: center; }
+  .homepage .emergency-alert p {
+    padding-bottom: 40px; }
 
 .homepage .ctas {
   background: #3667b1; }
@@ -5182,6 +5364,7 @@ header {
       .homepage .newhope-info .container {
         flex-direction: column; } }
     .homepage .newhope-info .container > div {
+      border: 1px solid #fff;
       margin-top: 30px;
       width: 247px; }
       @media only screen and (max-width: 768px) {
@@ -5195,6 +5378,17 @@ header {
         background: #e0a422; }
       .homepage .newhope-info .container > div:nth-child(4) .title {
         background: #de3a46; }
+      .homepage .newhope-info .container > div .select-services {
+        /*display: block;
+					position: relative;
+					height: 100%;
+					width: 100%;*/ }
+        .homepage .newhope-info .container > div .select-services .hover-image {
+          display: none; }
+        .homepage .newhope-info .container > div .select-services:hover .main-image {
+          display: none; }
+        .homepage .newhope-info .container > div .select-services:hover .hover-image {
+          display: block; }
     .homepage .newhope-info .container .title {
       color: #fff;
       display: block;
@@ -5214,7 +5408,7 @@ header {
   background: url("../images/background.png") no-repeat;
   background-size: cover;
   height: auto;
-  min-height: 1100px;
+  min-height: 1250px;
   width: 100%; }
 
 @media only screen and (max-width: 768px) {
@@ -5254,6 +5448,8 @@ header {
         align-items: center; } }
   .homepage .connect i {
     margin-right: 10px; }
+  .homepage .connect iframe {
+    margin-top: 25px; }
   .homepage .connect .enewsletter {
     width: 350px;
     margin-top: 40px; }
@@ -5325,6 +5521,9 @@ header {
   font-size: 1.5em;
   padding: 50px 10% 30px; }
 
+.homepage .slideshow {
+  margin-top: -14px; }
+
 .internal_wrapper {
   margin-top: 130px;
   width: 100%; }
@@ -5345,9 +5544,34 @@ header {
     line-height: 28px; }
   .internal_wrapper ul {
     margin-bottom: 20px; }
-  .internal_wrapper .page-header img {
-    margin-top: 60px;
-    width: 100%; }
+  .internal_wrapper .ccm-block-page-list-page-entry-horizontal {
+    border-bottom: 1px solid #36A6DC;
+    margin-top: 4px;
+    padding-bottom: 20px; }
+  .internal_wrapper .ccm-block-page-list-title {
+    padding: 20px 0 10px; }
+    .internal_wrapper .ccm-block-page-list-title a {
+      color: #3667b1;
+      font-size: 22px;
+      margin: 30px 0 10px;
+      text-decoration: none; }
+  .internal_wrapper .ccm-block-page-list-description {
+    font-size: 18px;
+    line-height: 28px; }
+  .internal_wrapper .ccm-block-page-list-page-entry-thumbnail {
+    padding-top: 20px; }
+    .internal_wrapper .ccm-block-page-list-page-entry-thumbnail img {
+      width: 150px !important; }
+  .internal_wrapper .page-header {
+    display: flex; }
+    .internal_wrapper .page-header img {
+      align-self: center;
+      margin-top: 35px;
+      height: auto;
+      width: 100%; }
+      @media screen and (max-width: 992px) {
+        .internal_wrapper .page-header img {
+          margin-top: 100px; } }
   .internal_wrapper form {
     width: 500px; }
   .internal_wrapper .internal_content_wrapper {
@@ -5400,6 +5624,38 @@ header {
         @media screen and (max-width: 992px) {
           .internal_wrapper .internal_content_wrapper .sidebar_container .nav-dropdown ul {
             display: none; } }
+      .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry {
+        display: flex;
+        margin-top: 10px;
+        font-size: 20px; }
+        .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry span {
+          font-size: 30px; }
+        .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry .fa {
+          font-size: 25px; }
+        .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry > div {
+          align-items: center;
+          display: flex;
+          min-height: 60px;
+          padding: 10px 0;
+          width: 80px; }
+          .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry > div:first-child {
+            background: #de3a46;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase; }
+          .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry > div:nth-child(2) {
+            border: 1px solid #999;
+            font-size: 18px;
+            padding: 0 20px;
+            width: 100%; }
+          .internal_wrapper .internal_content_wrapper .sidebar_container .date-entry > div a {
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+            width: 100%;
+            height: 100%; }
     .internal_wrapper .internal_content_wrapper .internal_content_container {
       float: right;
       border-left: #3667b1 3px solid;
@@ -5566,6 +5822,9 @@ header {
           font-size: 1.1em;
           min-height: 165px;
           padding: 30px; }
+  .internal_wrapper .BBFormContainer[data-bbox-part-id="8670af25-0ee3-47a7-a563-7ba484ffc971"] .BBDFormSectionComments .BBFormFieldLabel,
+  .internal_wrapper .BBFormContainer[data-bbox-part-id="8670af25-0ee3-47a7-a563-7ba484ffc971"] .BBDFormSectionComments .BBFormTextArea {
+    margin-left: 0 !important; }
 
 footer {
   background: #a0a0a0;
@@ -5617,7 +5876,7 @@ footer {
   footer .logos {
     text-align: center; }
     footer .logos .cql-logo {
-      margin: 0 30px 0 110px; }
+      margin-right: 50px; }
   footer ul li {
     list-style-type: none; }
   footer .address {
@@ -5629,249 +5888,235 @@ footer {
   footer p {
     line-height: 22px; }
 
-.donation-page p {
-  font-size: 18px;
-  line-height: 26px; }
-
-.donation-page .image-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0;
-  width: 100%; }
-  @media only screen and (max-width: 992px) {
-    .donation-page .image-row {
-      flex-direction: column; } }
-  .donation-page .image-row div {
-    width: 25%; }
-    .donation-page .image-row div img {
-      height: auto;
-      width: 100%; }
-
-.donation-page .donation-text {
-  display: flex;
-  margin-top: 65px;
-  align-items: flex-start; }
+.donation-page {
+  margin-top: 170px; }
   @media only screen and (max-width: 768px) {
-    .donation-page .donation-text {
-      flex-direction: column; } }
-  .donation-page .donation-text h1 {
-    margin-top: 0;
-    font-size: 54px;
-    line-height: 50px;
-    letter-spacing: 1px; }
-    .donation-page .donation-text h1 span {
-      color: #36a6dc; }
-  @media only screen and (max-width: 768px) {
-    .donation-page .donation-text img {
-      height: auto;
-      width: 100%; } }
-  .donation-page .donation-text > div {
-    height: 400px; }
-    .donation-page .donation-text > div:first-child {
-      width: 33.3%; }
-      @media only screen and (max-width: 768px) {
-        .donation-page .donation-text > div:first-child {
-          height: auto;
-          width: 100%; } }
-    .donation-page .donation-text > div:nth-child(2) {
-      padding-left: 50px;
-      width: 66.6%; }
-      @media only screen and (max-width: 768px) {
-        .donation-page .donation-text > div:nth-child(2) {
-          margin: 50px 0;
-          padding-left: 20px;
-          height: auto;
-          width: 90%; } }
-  .donation-page .donation-text .buttons {
+    .donation-page {
+      margin-top: 240px; } }
+  .donation-page p {
+    font-size: 18px;
+    line-height: 26px; }
+  .donation-page .donation-text {
     display: flex;
-    margin-top: 50px; }
-    .donation-page .donation-text .buttons > a {
-      margin-right: 30px;
-      text-decoration: none; }
-
-.donation-page .donation-do {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px auto 0; }
-  @media only screen and (max-width: 768px) {
-    .donation-page .donation-do {
-      flex-direction: column; } }
-  .donation-page .donation-do h2 {
-    margin: 10px 0 5px; }
-  .donation-page .donation-do > div {
-    width: 20%; }
-    .donation-page .donation-do > div p {
-      min-height: 120px; }
+    margin-top: 65px;
+    align-items: flex-start; }
     @media only screen and (max-width: 768px) {
-      .donation-page .donation-do > div {
-        margin: 30px auto;
-        width: 80%; } }
-    .donation-page .donation-do > div:nth-child(2) h2 {
-      color: #e0a422; }
-    .donation-page .donation-do > div:nth-child(3) h2 {
-      color: #589d4a; }
-    .donation-page .donation-do > div:nth-child(4) h2 {
-      color: #36a6dc; }
-
-.donation-page .story-wrapper {
-  background: url("../images/donation/background-image.png") no-repeat;
-  background-size: cover;
-  min-height: 1000px;
-  padding-bottom: 80px; }
-  .donation-page .story-wrapper .container {
-    position: relative; }
-
-.donation-page .our-stories,
-.donation-page .ways-to-participate,
-.donation-page .ctas {
-  text-align: center;
-  min-height: 500px; }
-  .donation-page .our-stories h2,
-  .donation-page .ways-to-participate h2,
-  .donation-page .ctas h2 {
-    margin: 50px auto 0; }
-  .donation-page .our-stories a,
-  .donation-page .ways-to-participate a,
-  .donation-page .ctas a {
-    margin-top: 20px;
-    width: 100%; }
-  @media only screen and (max-width: 992px) {
-    .donation-page .our-stories,
-    .donation-page .ways-to-participate,
-    .donation-page .ctas {
-      min-height: 880px;
-      padding-bottom: 50px; } }
-  .donation-page .our-stories .container,
-  .donation-page .ways-to-participate .container,
-  .donation-page .ctas .container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between; }
-    @media only screen and (max-width: 992px) {
-      .donation-page .our-stories .container,
-      .donation-page .ways-to-participate .container,
-      .donation-page .ctas .container {
+      .donation-page .donation-text {
         flex-direction: column; } }
-    .donation-page .our-stories .container > div,
-    .donation-page .ways-to-participate .container > div,
-    .donation-page .ctas .container > div {
-      margin-top: 60px;
-      width: 28%;
+    .donation-page .donation-text h1 {
+      margin-top: 0;
+      font-size: 54px;
+      line-height: 50px;
+      letter-spacing: 1px; }
+      .donation-page .donation-text h1 span {
+        color: #36a6dc; }
+    @media only screen and (max-width: 768px) {
+      .donation-page .donation-text img {
+        height: auto;
+        width: 100%; } }
+    .donation-page .donation-text > div {
+      height: 400px; }
+      .donation-page .donation-text > div:first-child {
+        width: 33.3%; }
+        @media only screen and (max-width: 768px) {
+          .donation-page .donation-text > div:first-child {
+            height: auto;
+            width: 100%; } }
+      .donation-page .donation-text > div:nth-child(2) {
+        padding-left: 50px;
+        width: 66.6%; }
+        @media only screen and (max-width: 768px) {
+          .donation-page .donation-text > div:nth-child(2) {
+            margin: 50px 0;
+            padding-left: 20px;
+            height: auto;
+            width: 90%; } }
+    .donation-page .donation-text .buttons {
+      display: flex;
+      margin-top: 50px; }
+      .donation-page .donation-text .buttons > a {
+        margin-right: 30px;
+        text-decoration: none; }
+  .donation-page .donation-do {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 0; }
+    @media only screen and (max-width: 768px) {
+      .donation-page .donation-do {
+        flex-direction: column; } }
+    .donation-page .donation-do h2 {
+      margin: 10px 0 5px; }
+    .donation-page .donation-do > div {
+      width: 20%; }
+      .donation-page .donation-do > div p {
+        min-height: 120px; }
+      @media only screen and (max-width: 768px) {
+        .donation-page .donation-do > div {
+          margin: 30px auto;
+          width: 80%; } }
+      .donation-page .donation-do > div:first-child h2 {
+        color: #e0a422; }
+      .donation-page .donation-do > div:nth-child(2) h2 {
+        color: #de3a46; }
+      .donation-page .donation-do > div:nth-child(3) h2 {
+        color: #589d4a; }
+      .donation-page .donation-do > div:nth-child(4) h2 {
+        color: #36a6dc; }
+  .donation-page .story-wrapper {
+    background: url("../images/donation/background-image.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 400px;
+    padding-bottom: 80px; }
+    .donation-page .story-wrapper .container {
       position: relative; }
-      .donation-page .our-stories .container > div img,
-      .donation-page .ways-to-participate .container > div img,
-      .donation-page .ctas .container > div img {
-        width: 100%;
-        height: auto; }
-      @media only screen and (max-width: 992px) {
-        .donation-page .our-stories .container > div,
-        .donation-page .ways-to-participate .container > div,
-        .donation-page .ctas .container > div {
-          margin-top: 20px;
-          width: 70%; } }
-      .donation-page .our-stories .container > div .title,
-      .donation-page .ways-to-participate .container > div .title,
-      .donation-page .ctas .container > div .title {
-        background: #3667b1; }
-      .donation-page .our-stories .container > div:nth-child(2) .title,
-      .donation-page .ways-to-participate .container > div:nth-child(2) .title,
-      .donation-page .ctas .container > div:nth-child(2) .title {
-        background: #e0a422; }
-      .donation-page .our-stories .container > div:nth-child(3) .title,
-      .donation-page .ways-to-participate .container > div:nth-child(3) .title,
-      .donation-page .ctas .container > div:nth-child(3) .title {
-        background: #589d4a; }
-      .donation-page .our-stories .container > div.blue .title,
-      .donation-page .ways-to-participate .container > div.blue .title,
-      .donation-page .ctas .container > div.blue .title {
-        background: #3667b1; }
-    .donation-page .our-stories .container .title,
-    .donation-page .ways-to-participate .container .title,
-    .donation-page .ctas .container .title {
-      color: #fff;
-      display: block;
-      display: flex;
-      font-weight: bold;
-      padding-top: 15px;
-      position: absolute;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      z-index: 2; }
-
-.donation-page .ctas {
-  min-height: auto; }
-  .donation-page .ctas .container > div {
-    width: 22%; }
+  .donation-page .our-stories,
+  .donation-page .ways-to-participate,
+  .donation-page .ctas {
+    text-align: center;
+    min-height: 500px; }
+    .donation-page .our-stories h2,
+    .donation-page .ways-to-participate h2,
+    .donation-page .ctas h2 {
+      margin: 50px auto 0; }
+    .donation-page .our-stories a,
+    .donation-page .ways-to-participate a,
+    .donation-page .ctas a {
+      margin-top: 20px;
+      width: 100%; }
     @media only screen and (max-width: 992px) {
-      .donation-page .ctas .container > div {
-        width: 70%; } }
-
-.donation-page .additional-info {
-  text-align: center;
-  padding: 40px 0; }
-
-.donation-page .ways-to-participate {
-  min-height: 400px; }
-
-.donation-page .quote {
-  background: rgba(255, 255, 255, 0.7);
-  color: #000;
-  padding: 50px;
-  position: absolute;
-  right: 50px;
-  width: 60%;
-  font-size: 1.2em;
-  line-height: 1.3em; }
-  @media only screen and (max-width: 992px) {
-    .donation-page .quote {
-      left: 10%;
-      width: 75%;
-      position: relative; } }
-  .donation-page .quote .quote-mark {
-    position: absolute; }
-    .donation-page .quote .quote-mark.left {
-      top: -40px;
-      left: -40px; }
-    .donation-page .quote .quote-mark.right {
-      right: -40px;
-      top: 150px; }
-
-.donation-page .hope-farm {
-  background: url("../images/donation/hope-farm-bg.png") no-repeat;
-  background-size: cover;
-  display: flex;
-  height: 350px;
-  margin-top: 20px;
-  padding-top: 90px;
-  width: 100%; }
-  .donation-page .hope-farm .support-cta {
-    margin-left: 10%;
-    position: relative; }
-    .donation-page .hope-farm .support-cta .hope-farm-icon {
-      margin-top: -60px;
-      width: 400px;
-      z-index: 2; }
-    .donation-page .hope-farm .support-cta .hope-text {
+      .donation-page .our-stories,
+      .donation-page .ways-to-participate,
+      .donation-page .ctas {
+        min-height: 880px;
+        padding-bottom: 50px; } }
+    .donation-page .our-stories .container,
+    .donation-page .ways-to-participate .container,
+    .donation-page .ctas .container {
       align-items: center;
-      justify-content: center;
-      background: rgba(222, 58, 70, 0.6);
-      color: #fff;
       display: flex;
-      flex-wrap: wrap;
-      font-size: 40px;
-      height: 70px;
-      left: 400px;
-      position: absolute;
-      text-align: center;
-      top: 30px;
-      width: 200px;
-      z-index: 1; }
-      .donation-page .hope-farm .support-cta .hope-text p {
-        margin: 0;
-        line-height: 20px; }
-      .donation-page .hope-farm .support-cta .hope-text span {
-        font-weight: bold; }
+      justify-content: space-between; }
+      @media only screen and (max-width: 992px) {
+        .donation-page .our-stories .container,
+        .donation-page .ways-to-participate .container,
+        .donation-page .ctas .container {
+          flex-direction: column; } }
+      .donation-page .our-stories .container > div,
+      .donation-page .ways-to-participate .container > div,
+      .donation-page .ctas .container > div {
+        margin-top: 60px;
+        width: 28%;
+        position: relative; }
+        .donation-page .our-stories .container > div img,
+        .donation-page .ways-to-participate .container > div img,
+        .donation-page .ctas .container > div img {
+          width: 100%;
+          height: auto; }
+        @media only screen and (max-width: 992px) {
+          .donation-page .our-stories .container > div,
+          .donation-page .ways-to-participate .container > div,
+          .donation-page .ctas .container > div {
+            margin-top: 20px;
+            width: 70%; } }
+        .donation-page .our-stories .container > div .title,
+        .donation-page .ways-to-participate .container > div .title,
+        .donation-page .ctas .container > div .title {
+          background: #3667b1; }
+        .donation-page .our-stories .container > div:nth-child(2) .title,
+        .donation-page .ways-to-participate .container > div:nth-child(2) .title,
+        .donation-page .ctas .container > div:nth-child(2) .title {
+          background: #e0a422; }
+        .donation-page .our-stories .container > div:nth-child(3) .title,
+        .donation-page .ways-to-participate .container > div:nth-child(3) .title,
+        .donation-page .ctas .container > div:nth-child(3) .title {
+          background: #589d4a; }
+        .donation-page .our-stories .container > div.blue .title,
+        .donation-page .ways-to-participate .container > div.blue .title,
+        .donation-page .ctas .container > div.blue .title {
+          background: #3667b1; }
+      .donation-page .our-stories .container .title,
+      .donation-page .ways-to-participate .container .title,
+      .donation-page .ctas .container .title {
+        color: #fff;
+        display: block;
+        display: flex;
+        font-weight: bold;
+        padding-top: 15px;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        z-index: 2; }
+  .donation-page .ctas {
+    min-height: auto; }
+    .donation-page .ctas .container > div {
+      width: 22%; }
+      @media only screen and (max-width: 992px) {
+        .donation-page .ctas .container > div {
+          width: 70%; } }
+  .donation-page .additional-info {
+    text-align: center;
+    padding: 40px 0; }
+  .donation-page .ways-to-participate {
+    min-height: 400px; }
+  .donation-page .quote {
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding: 50px;
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    width: 60%; }
+    @media only screen and (max-width: 992px) {
+      .donation-page .quote {
+        left: 10%;
+        width: 75%;
+        position: relative; } }
+    .donation-page .quote .quote-mark {
+      position: absolute; }
+      .donation-page .quote .quote-mark.left {
+        top: -40px;
+        left: -40px; }
+      .donation-page .quote .quote-mark.right {
+        right: -40px;
+        top: 150px; }
+  .donation-page .hope-farm {
+    background: url("../images/donation/hope-farm-bg.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 350px;
+    margin-top: 20px;
+    padding-top: 90px;
+    width: 100%; }
+    .donation-page .hope-farm .support-cta {
+      margin-left: 10%;
+      position: relative; }
+      .donation-page .hope-farm .support-cta .hope-farm-icon {
+        margin-top: -60px;
+        width: 400px;
+        z-index: 2; }
+      .donation-page .hope-farm .support-cta .hope-text {
+        align-items: center;
+        justify-content: center;
+        background: rgba(222, 58, 70, 0.6);
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 40px;
+        height: 70px;
+        left: 400px;
+        position: absolute;
+        text-align: center;
+        top: 30px;
+        width: 200px;
+        z-index: 1; }
+        .donation-page .hope-farm .support-cta .hope-text p {
+          margin: 0;
+          line-height: 20px; }
+        .donation-page .hope-farm .support-cta .hope-text span {
+          font-weight: bold; }
 
 .timeline {
   margin-top: 0; }

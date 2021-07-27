@@ -26,6 +26,12 @@
   <header>
     <div class="topbar">
       <div><i class="fa fa-phone"></i><a href="tel:8454348300">(845) 434-8300</a></div>
+      <div class="searchbox">
+        <?php
+          $a = new GlobalArea("Search Box");
+          $a->display();
+        ?>
+      </div>
       <div>
         <div class="social">
           <a href="https://www.instagram.com/newhope1975/" target="social"><i class="fa fa-instagram"></i></a>
@@ -50,19 +56,6 @@
      <div class="logo">
        <a href="/"><img src="<?php echo $this->getThemePath(); ?>/images/nh-logo-blue.svg" alt="New Hope Logo"></a>
      </div>
-    <!--<ul class="nav">
-      <li class="">
-        <a href="/our-services" target="_self" class="">Our Services</a>
-        
-      </li>
-      <li class="">
-        <a href="/who-we-are" target="_self" class="">Who We Are</a>
-         <div class="submenu"><a href="/our-services/our-process">Our Process</a></div>
-      </li>
-      <li class="">
-        <a href="/support-us" target="_self" class="">Support Us</a>
-      </li>
-        </ul> -->
         <?php   
                     $bt = BlockType::getByHandle('autonav');
                     $bt->controller->displayPages = 'top'; // 'top', 'above', 'below', 'second_level', 'third_level', 'custom', 'current'
@@ -72,7 +65,7 @@
                     $bt->controller->displaySubPageLevels = 'all'; // 'enough', 'enough_plus1', 'all', 'custom'
                     $bt->controller->displaySubPageLevelsNum = '0'; // if displaySubPages is set 'custom'
                     $bt->render('templates/main_nav'); // for template 'templates/template_name';
-                    ?>
+                    ?> 
     </div>
   </header>
 

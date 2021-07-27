@@ -11,7 +11,7 @@
            <img src='<?php echo $image_src; ?>'>
            
        <?php else: ?>
-           <img src='<?php echo $this->getThemePath() ?>/images/internal/placeholder.png' alt='New Hope Community'>
+           <img src='<?php echo $this->getThemePath() ?>/images/placeholder.png' alt='New Hope Community'>
            
        <?php endif; ?>
        
@@ -34,7 +34,8 @@
       <div class="carousel">
         <?php
           $pl = new PageList();
-          $pl->filterByCollectionTypeHandle('news');
+          $pl->filterByParentID(286);
+          $pl->sortByDisplayOrder('alpha_asc'); // Sort alphebetically
           $pages = $pl->get(); 
 
           foreach ($pages as $page){ 
@@ -42,6 +43,7 @@
               $title = $page->getCollectionName();
               $description = $page->getCollectionDescription();
               $thumbnail = $page->getAttribute('thumbnail');
+              $imgpath = $thumbnail->getDownloadURL();
               $excerpt = substr($description, 0, 95);
 
               if($page->getAttribute('event_date')) {
@@ -49,13 +51,9 @@
               } ?>
 
               <div>
-                <div class="photo">
                   <?php if (is_object($thumbnail)) {
                         ?>
-                            <?php
-                            $img = Core::make('html/image', array($thumbnail));
-                            $tag = $img->getTag();
-                            echo $tag; ?>
+                          <div class="photo" style="background:url(<?php echo $imgpath ?>);background-size:cover">
                         <?php
                     } else { ?>
                         <img src='<?php echo $this->getThemePath() ?>/images/placeholder.jpg' alt='New Hope Community'>
@@ -80,7 +78,7 @@
       </div>
     </div>
 
-     <?php
+     <!-- <?php
       $a = new Area("Events Header"); 
       $a->display($c);
     ?>
@@ -120,15 +118,15 @@
               </div>
 
               <?php
-          } ?>
-    </div>
+          } ?> 
+    </div> -->
         
   </div>
 	<div class="sidebar_container">
-     <h2>Related Pages</h2>
+     <h1>Events</h1>
 		<?php
       $list = new \Concrete\Core\Page\PageList();
-      $list->filterByPageTypeHandle(['news','event']);
+      $list->filterByPageTypeHandle(['event']);
       $list->sortByDisplayOrder();
       $pages = $list->getResults();
 
@@ -137,16 +135,30 @@
         $pagename = $page->getCollectionName();
         $description = $page->getCollectionDescription();
         $url = $page->getCollectionLink();
+        $date_month = "<i class='fa fa-calendar-alt'></i>";
+        $date_day = "";
 
-        if($page->getAttribute('event_date')) {
-          $date = $page->getAttribute('event_date');
-        } ?> 
+        if($page->getAttribute('date_month')) {
+          $date_month = $page->getAttribute('date_month');
+        } 
+
+        if($page->getAttribute('date_day')) {
+          $date_day = $page->getAttribute('date_day');
+        } 
+        ?>  
        
-        <p>
-          <a href="<?php echo $url ?>"><?php echo $pagename ?></a>
-        <br />
-          <?php echo $date ?>
-        </p>
+        <div class="date-entry">
+          <!-- <i class="fa fa-calendar-alt"></i>  -->
+            <div>
+              <?php echo $date_month ?>
+            <span>
+              <?php echo $date_day ?>
+              </span>
+          </div>
+          <div>
+            <a href="<?php echo $url ?>"><?php echo $pagename ?></a>
+          </div>
+        </div>
 
         
     <?php } ?>

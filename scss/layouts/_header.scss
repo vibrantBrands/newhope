@@ -8,16 +8,18 @@ header {
 	z-index: 100;
 
 	.topbar {
-		background: $nh-blue;
-		height: $topbar-height;
-		display: flex;
-		color: $white;
-		font-size: 1.2em;
-		justify-content: space-between;
 		align-items: center;
+		background: $nh-blue;
+		color: $white;
+		display: flex;
+		font-size: 1.2em;
+		height: $topbar-height;
+		justify-content: space-between;
 
 		@media only screen and (max-width: $md-breakpoint) {
 			align-items: center;
+			flex-direction: column;
+			padding-bottom: 10px;
 			height: auto;
 			justify-content: space-around;
 		}
@@ -77,6 +79,32 @@ header {
 				}
 			}
 		}
+
+		.searchbox {
+			display: flex;
+			margin: 10px auto;
+			max-width: 300px;
+
+			input[type="submit"] {
+				background: $nh-red;
+				color: $white;
+				padding: 10px 20px;
+			}
+
+			form {
+				display: flex;
+				align-items: center;
+
+				input {
+					margin: 0 5px;
+				}
+
+				h3 {
+					color: $white;
+					margin-top: 0
+				}
+			}
+		}
 	}
 
 	.navigation {
@@ -85,10 +113,9 @@ header {
 		background: $white;
 		display: flex;
 		font-size: 1.3em;
-		justify-content: space-around;
+		justify-content: space-between;
 		text-transform: uppercase;
 		min-height: 80px;
-		//padding: 10px 20px;
 		top: 0;
 		width: 100%;
 		z-index: 3;
@@ -100,12 +127,35 @@ header {
 
 		.logo {
 			height: auto;
-			margin: 10px 0;
-			width: 200px;
+			margin: 10px 0 0 2%;
+			width: 180px;
 
 			@media only screen and (max-width: $md-breakpoint) {
 				align-self: center;
 				margin-right: 10px;
+				max-width: 120px;
+			}
+		}
+
+		.amazon-logo {
+			margin-top: -15px;
+			max-width: 180px;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				max-width: 180px;
+				position: absolute;
+				top: 160px;
+				left: 100px;
+			}
+		}
+
+		.right-nav {
+			display: flex;
+
+			@media only screen and (max-width: $md-breakpoint) {
+				width: 100%;
+				position: absolute;
+				top: 0;
 			}
 		}
 
@@ -200,11 +250,19 @@ header {
 			}
 		}
 
+		&.support {
+
+			.nav {
+				margin-right: 0 !important;
+			}
+		}
+
 		.nav {
             align-items: center;
             display: flex;
             font-weight: 700;
             justify-content: flex-end;
+            margin-right: 10%;
             padding-left: 0;
             text-align: right;
             z-index: 10;
@@ -220,7 +278,7 @@ header {
                 font-size: 16px;
                 min-height: 1000px;
                 position: fixed;
-                top: 185px;
+                top: 235px;
                 width: 100%;
             }
 
@@ -230,6 +288,32 @@ header {
             	display: block;
             }
 
+            >.dropdown {
+            	column-count: 2;
+
+            	&:after {
+            		content: ' ';
+				    width: 0px;
+				    height: 0px;
+				    background-color: transparent;
+				    position: absolute;
+				    border-top: 10px solid transparent;
+				    border-right: 10px solid transparent;
+				    border-bottom: 10px solid transparent;
+				    border-left: 15px solid $nh-blue;
+				    transform: rotate(-90deg);
+            		display: none;
+            		margin-left: 50px;
+            		top: 118px;
+            	}
+
+            	&:hover {
+            		&:after {
+            			display: block;
+            		}
+            	}
+            }
+
             >li {
                 color: $nh-blue;
                 display: flex;
@@ -237,86 +321,139 @@ header {
                 justify-content: flex-start;
                 margin: 0 3px 0;
                 padding: 0 10px;
-                text-align: left;
+                text-align: center;
                 text-decoration: none;
 
                 a {
                 	text-decoration: none;
                 }
 
+
                 >.submenu {
+                	background: $nh-blue;
+                	column-count: 2;
+                    margin: -1px 0 0 -200px;
                     max-height: 0;
-                    margin-top: -1px;
                     overflow: hidden;
-                    padding: 0;
                     position: absolute;
                     top: 140px;
                     transition: all .4s ease-out;
                     z-index: 2;
 
+                     @media screen and (max-width: $lg-breakpoint) {
+                     	background: $nh-blue;
+                     	border-top: 1px solid $white;
+                		column-count: 1;
+                		padding: 0;
+            		}
+
+
+                    &:after {
+						border-bottom-color: #3667b1;
+						border-color: rgba(54, 103, 177, 0);
+						border-width: 15px;
+						border: solid transparent;
+						content: "";
+						height: 0;
+						left: 50%;
+						margin-left: -15px;
+						pointer-events: none;
+						position: absolute;
+						width: 0;
+                    	bottom: 100%;
+                    }
+
+                    &.one {
+                    		margin-left: -200px;
+                    	}
+                	&.two {
+                		margin-left: 50px;
+                	}
+
                     >.nav-item {
-                    	//background: $nh-blue;
-						/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#36a6dc+0,36a6dc+47,36a6dc+47,3667b1+47,3667b1+100 */
 						background: $nh-blue; /* Old browsers */
+						border-bottom: 1px solid #36A6DC;
+						margin-right: 20px;
+						text-align: left;
 						transition: all .2s ease-out;
-                    	border-top: 0;
-                    	border: $white 1px solid;
-                    	padding: 10px;
                     	position: relative;
+
+                    	@media screen and (max-width: $lg-breakpoint) {
+                    		background: $nh-blue;
+	                		column-count: 1;
+	                		padding: 4px 0;
+	            		}
+
+                    	&:last-child {
+                    		border: none;
+                    	}
 
                     	a {
                     		color: $nav-color;
+                    		display: block;
+                    		padding: 10px;
                     	}
 
                     	&:hover {
-                    		background: #edf6ff;
 
-                			a {
-                				color: $nh-blue;
-                				display: block;
-                				height: 100%;
-                				width: 100%;
+                			>a {
+                				color: #fc0;
                 			}
                 		}
 
-                		&.dropdown {
-                			&:hover {
-                				background: $nav-color;
-                			}
+                		>.submenu {
+                			background: $nh-blue;
+                			
+                			>.nav-item {
+                				background: $nh-blue;
 
+                				> a {
+                					padding: 5px;
+                				}
+                			}
                 		}
                     }
 
                     .submenu {
-                    	margin-bottom: 0;
-                    	margin-top: 10px;
+                    	background: $nh-blue;
 
                     	.nav-item {
+                    		background: $nh-blue;
                     		color: white;
+                    		font-weight: normal;
                     		margin-bottom: 0;
-                    		padding: 5px 0 5px 20px;
+                    		padding-left: 20px;
                     		border: 0;
 
-                    		&:hover {
-                    			background: $nh-blue;
-                 				
-                 				a {
-                 					color: $nav-color;
-                 				}
+                    		a {
+                    			&:hover {
+                    				color: #fc0;
+                    			}
                     		}
                     	}
                     }
 
+
                     @media screen and (max-width: $md-breakpoint) {
-						max-width: 60%;
+                    	background: $nh-blue;
+						max-width: 70%;
 						right: 0;
 						top: 0;
 
 						 >.nav-item {
-						 	border-top: 1px solid white;
-						 	border-left: 1px solid white;
+						 	background: $nh-blue;
+						 	//border-top: 1px solid white;
+						 	//border-left: 1px solid white;
 						 	margin-top: 0;
 						 	padding: 0;
+
+						 	a {
+						 		border-left: 1px solid $white;
+						 		border-right: 1px solid $white;
+						 		border-bottom: 1px solid $white;
+						 		align-items: center;
+						 		display: flex;
+						 	}
 
 						 	&:last-child {
 						 		border-bottom: 1px solid white;
@@ -336,8 +473,11 @@ header {
 
                 &:hover {
                     
-                    .submenu {
+                    >.submenu {
+                        background: $nh-blue;
                         max-height: 800px;
+                        padding: 10px;
+                        z-index: 10;
                     }
                 }
 
@@ -359,9 +499,19 @@ header {
                         height: 60px;
                         width: 100%;
 
+                         @media screen and (max-width: $lg-breakpoint) {
+			               height: 40px;
+			            }
+
                         &:hover {
                             color: white;
                         }
+                    }
+
+                    >a {
+                    	 @media screen and (max-width: $lg-breakpoint) {
+			                height: 60px;
+			            }
                     }
 
                     &:hover {
